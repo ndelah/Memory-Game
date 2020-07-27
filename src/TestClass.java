@@ -1,18 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class TestClass {
+public class TestClass{
 
-    JButton button = new JButton("Click me!");
-
-    Dimension dimensions = new Dimension(300,200);
-
-    private static JPanel makePanel(Color color){
-        JPanel panel = new JPanel();
-        panel.setBackground(color);
-        panel.setPreferredSize(new Dimension(100,100));
-        return panel;
-    }
 
     public static void main(String[] args) {
         // Setting the frame
@@ -127,6 +117,10 @@ public class TestClass {
 
         JButton exitButton = new JButton("Exit");
         lastSettingsPanel.add(exitButton);
+
+        //eventhandling of the exit button
+        ExitHandler exithandler = new ExitHandler(exitButton);
+        exitButton.addActionListener(exithandler);
 
 
         // Easy way to add certain types of recucring panels. Could be useful for the grid
