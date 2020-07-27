@@ -42,6 +42,7 @@ public class StartMenu extends JFrame {
     private int panelHeight = 200;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
+    private Difficulty difficulty = new Difficulty();
 
     public StartMenu() {
         // Frame
@@ -55,19 +56,8 @@ public class StartMenu extends JFrame {
         this.getContentPane().add(panel_rules);
 
         // Difficulty
-        this.createPanel(panel_difficulty, panelColor,panelDimension);
-        panel_difficulty.add(label_difficulty);
-        panel_difficulty.add(touristButton);
-        panel_difficulty.add(noviceButton);
-        panel_difficulty.add(expertButton);
-        panel_difficulty.add(veteranButton);
-        panel_difficulty.add(seriousButton);
-        difficultyGroup.add(touristButton);
-        difficultyGroup.add(noviceButton);
-        difficultyGroup.add(expertButton);
-        difficultyGroup.add(veteranButton);
-        difficultyGroup.add(seriousButton);
-        this.getContentPane().add(panel_difficulty);
+        this.createPanel(difficulty, panelColor,panelDimension);
+        this.getContentPane().add(difficulty);
 
         // Time
         this.createPanel(timePanel, panelColor,panelDimension);
