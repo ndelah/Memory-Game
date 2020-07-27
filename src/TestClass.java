@@ -111,10 +111,22 @@ public class TestClass {
 
         // Theme high score, start and exit
 
-        JPanel lastSettings = new JPanel();
-        lastSettings.setBackground(Color.WHITE);
-        lastSettings.setPreferredSize(new Dimension(300,300));
-        lastSettings.setLayout(new FlowLayout());
+        JPanel lastSettingsPanel = new JPanel();
+        lastSettingsPanel.setBackground(Color.WHITE);
+        lastSettingsPanel.setPreferredSize(new Dimension(300,300));
+        lastSettingsPanel.setLayout(new FlowLayout());
+
+        JButton themeButton = new JButton("Theme");
+        lastSettingsPanel.add(themeButton);
+
+        JButton highscoreButton = new JButton("Highscore");
+        lastSettingsPanel.add(themeButton);
+
+        JButton startButton = new JButton("Start");
+        lastSettingsPanel.add(startButton);
+
+        JButton exitButton = new JButton("Exit");
+        lastSettingsPanel.add(exitButton);
 
 
         // Easy way to add certain types of recucring panels. Could be useful for the grid
@@ -125,8 +137,7 @@ public class TestClass {
         frame.getContentPane().add(timePanel);
         frame.getContentPane().add(opponentPanel);
         frame.getContentPane().add(gridSizePanel);
-
-        frame.getContentPane().add(makePanel(Color.red));
+        frame.getContentPane().add(lastSettingsPanel);
 
         frame.pack();
         frame.setVisible(true);
