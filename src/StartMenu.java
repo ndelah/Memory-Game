@@ -44,6 +44,8 @@ public class StartMenu extends JFrame {
 
 
         WindowChanger windowChanger = new WindowChanger(rulesPanel.getRulesButton(),extraSettingsPanel.getStartButton());
+        windowChanger.setRows(3);
+        windowChanger.setColumns(3);
         rulesPanel.getRulesButton().addActionListener(windowChanger);
         extraSettingsPanel.getStartButton().addActionListener(windowChanger);
 
