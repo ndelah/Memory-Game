@@ -5,19 +5,8 @@ public class StartMenu extends JFrame {
     // Rules
     private JPanel panel_rules = new JPanel();
     private JButton rulesButton = new JButton("Rules");;
-    // Difficulty
-    private JPanel panel_difficulty = new JPanel();
-    private JLabel label_difficulty = new JLabel("Difficulty");
-    private JRadioButton touristButton = new JRadioButton("Tourist");
-    private JRadioButton noviceButton = new JRadioButton("Novice");
-    private JRadioButton expertButton = new JRadioButton("Expert");
-    private JRadioButton veteranButton = new JRadioButton("Veteran");
-    private JRadioButton seriousButton = new JRadioButton("Serious");
-    private ButtonGroup difficultyGroup = new ButtonGroup();
-    // Time
-    private JPanel timePanel = new JPanel();
-    private JLabel timeLabel = new JLabel("Time");
-    private JSlider timeSlider = new JSlider(JSlider.HORIZONTAL, 0, 100 , 50);
+
+
     // Players
     private JPanel opponentPanel = new JPanel();
     private JLabel opponentLabel = new JLabel("Opponent");
@@ -43,6 +32,7 @@ public class StartMenu extends JFrame {
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
     private Difficulty difficulty = new Difficulty();
+    private Time timePanel = new Time();
 
     public StartMenu() {
         // Frame
@@ -61,8 +51,6 @@ public class StartMenu extends JFrame {
 
         // Time
         this.createPanel(timePanel, panelColor,panelDimension);
-        timePanel.add(timeLabel);
-        timePanel.add(timeSlider);
         this.getContentPane().add(timePanel);
 
 
