@@ -14,5 +14,14 @@ public class GridSize extends JPanel {
         this.add(rowsSpinner);
         this.add(colummsLabel);
         this.add(columnspinner);
+
+    }
+
+    public JSpinner getRowsSpinner() {
+        return rowsSpinner;
+    }
+
+    public JSpinner getColumnspinner() {
+        return columnspinner;
     }
 }

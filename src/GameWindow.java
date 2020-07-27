@@ -16,6 +16,7 @@ public class GameWindow extends JFrame {
 
     private int rows;
     private int columns;
+    private int gridSize; // TODO: make
 
     // Parameters
     //TODO: Create some sort of template so that I dont always have to repeat those parameters.
@@ -29,6 +30,7 @@ public class GameWindow extends JFrame {
     public GameWindow(int rows, int columns){
         this.rows = rows;
         this.columns = columns;
+        this.setGridSize();
 
 
         // Create the Frame containing the Game
@@ -50,7 +52,6 @@ public class GameWindow extends JFrame {
         //leftPanel.setLayout();
         upperPanel.add(timeLeft);
 
-
         // Left Panel
         gamePanel.add(leftPanel, BorderLayout.WEST);
         //leftPanel.setLayout();
@@ -63,7 +64,7 @@ public class GameWindow extends JFrame {
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
 
-        for (int i = 0; i < 9 ; i++) {
+        for (int i = 0; i < gridSize ; i++) {
             centerPanel.add(new JButton("Button 1"));
         }
 
@@ -91,6 +92,10 @@ public class GameWindow extends JFrame {
         panel.setPreferredSize(panelDimension);
         panel.setLayout(layout);
         this.getContentPane().add(panel);
+    }
+
+    public void setGridSize() {
+        this.gridSize = this.getColumns() * this.getRows();
     }
 
     public JPanel getGridPanel() {

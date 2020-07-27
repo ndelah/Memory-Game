@@ -17,6 +17,8 @@ public class StartMenu extends JFrame {
     private GridSize gridSizePanel = new GridSize();
     private ExtraSettings extraSettingsPanel = new ExtraSettings();
 
+    private int rows;
+    private int columns;
 
     public StartMenu() {
         // Frame
@@ -38,14 +40,25 @@ public class StartMenu extends JFrame {
 
         // GridSize: Rows and columns of the game
         this.createPanel(gridSizePanel, panelColor,panelDimension);
+        rows = (Integer) gridSizePanel.getRowsSpinner().getValue();
+        columns = (Integer) gridSizePanel.getColumnspinner().getValue();
+
+        //GridSixeChangelistener
+        GridChangeListener gridUpdater = new GridChangeListener(gridSizePanel.getRowsSpinner(),gridSizePanel.getColumnspinner());
+        gridSizePanel.getRowsSpinner().addChangeListener(gridUpdater);
+        gridSizePanel.getColumnspinner().addChangeListener(gridUpdater);
+
+        this.rows = gridUpdater.getRows();
+        this.columns = gridUpdater.getColumns();
+
 
         // Settings on the last row: Theme high score, start and exit
         this.createPanel(extraSettingsPanel, panelColor,panelDimension);
 
 
         WindowChanger windowChanger = new WindowChanger(rulesPanel.getRulesButton(),extraSettingsPanel.getStartButton());
-        windowChanger.setRows(3);
-        windowChanger.setColumns(3);
+        windowChanger.setRows(2);
+        windowChanger.setColumns(2);
         rulesPanel.getRulesButton().addActionListener(windowChanger);
         extraSettingsPanel.getStartButton().addActionListener(windowChanger);
 
