@@ -7,5 +7,8 @@ public class Rules extends JPanel {
 
     public Rules (){
         this.add(rulesButton);
+
+        RulesHandler rulesHandler = new RulesHandler(this.rulesButton);
+        this.rulesButton.addActionListener(rulesHandler);
     }
 }

@@ -6,8 +6,8 @@ public class StartMenu extends JFrame {
     // Parameters
     private String gameWindowTitle = "Memory Game";
     private Color panelColor = Color.WHITE;
-    private int panelWidth = 300;
-    private int panelHeight = 200;
+    private int panelWidth = 500;
+    private int panelHeight = 50;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
     private Rules rulesPanel = new Rules();
@@ -51,6 +51,5 @@ public class StartMenu extends JFrame {
         panel.setPreferredSize(panelDimension);
         panel.setLayout(new FlowLayout());
         this.getContentPane().add(panel);
-
     }
 }
