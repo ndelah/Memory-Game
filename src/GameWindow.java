@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class RulesWindow extends JFrame {
+public class GameWindow extends JFrame {
+
     private JPanel rulesPanel = new JPanel();
     private JLabel rules = new JLabel("Rules of the game");
     private JButton exitButton = new JButton("Exit");
@@ -14,7 +15,7 @@ public class RulesWindow extends JFrame {
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
 
-    public RulesWindow(){
+    public GameWindow(){
         // Create the Frame containing the rules
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Rules of the GameWindow");
@@ -40,6 +41,7 @@ public class RulesWindow extends JFrame {
         panel.setLayout(new FlowLayout());
         this.getContentPane().add(panel);
     }
+
 
 
 }

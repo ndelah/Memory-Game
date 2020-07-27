@@ -4,7 +4,7 @@ import java.awt.*;
 public class StartMenu extends JFrame {
 
     // Parameters
-    private String gameWindowTitle = "Memory Game";
+    private String gameWindowTitle = "Memory GameWindow";
     private Color panelColor = Color.WHITE;
     private int panelWidth = 500;
     private int panelHeight = 50;
@@ -41,6 +41,11 @@ public class StartMenu extends JFrame {
 
         // Settings on the last row: Theme high score, start and exit
         this.createPanel(extraSettingsPanel, panelColor,panelDimension);
+
+
+        WindowChanger windowChanger = new WindowChanger(rulesPanel.getRulesButton(),extraSettingsPanel.getStartButton());
+        rulesPanel.getRulesButton().addActionListener(windowChanger);
+        extraSettingsPanel.getStartButton().addActionListener(windowChanger);
 
         this.pack();
         this.setVisible(true);
