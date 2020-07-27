@@ -46,11 +46,11 @@ public class StartMenu extends JFrame {
         // Settings on the last row: Theme high score, start and exit
         this.createPanel(extraSettingsPanel, panelColor,panelDimension);
 
-
+        // TODO: How do you refactor the eventhandler such that it is in the Extra Settings class?
         //eventhandling of the exit button
-        JButton exitButton = extraSettingsPanel.getExitButton();
-        ExitHandler exithandler = new ExitHandler(exitButton);
-        exitButton.addActionListener(exithandler);
+        //JButton exitButton = extraSettingsPanel.getExitButton();
+        //ExitHandler exithandler = new ExitHandler(exitButton);
+        //exitButton.addActionListener(exithandler);
         this.getContentPane().add(extraSettingsPanel);
 
 

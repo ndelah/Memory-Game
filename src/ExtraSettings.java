@@ -11,6 +11,10 @@ public class ExtraSettings extends JPanel {
         this.add(themeButton);
         this.add(startButton);
         this.add(exitButton);
+
+        // Closes the Welcome Window when the exit button is clicked
+        ExitHandler exithandler = new ExitHandler(this.getExitButton());
+        this.getExitButton().addActionListener(exithandler);
     }
 
     public JButton getThemeButton() {
