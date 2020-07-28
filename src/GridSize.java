@@ -5,9 +5,9 @@ public class GridSize extends JPanel {
     // Gridsize
     private JPanel gridSizePanel = new JPanel();
     private JLabel rowsLabel = new JLabel("Rows");
-    private JSpinner rowsSpinner = new JSpinner();
+    private JSpinner rowsSpinner = new JSpinner(new SpinnerNumberModel(2,2,10,2));
     private JLabel colummsLabel = new JLabel("Colums");
-    private JSpinner columnspinner = new JSpinner();
+    private JSpinner columnspinner = new JSpinner(new SpinnerNumberModel(2,2,10,2));
 
     public GridSize(){
         this.add(rowsLabel);

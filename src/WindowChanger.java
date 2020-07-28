@@ -17,11 +17,11 @@ public class WindowChanger implements ActionListener {
         JFrame welcomeFrame = (JFrame) SwingUtilities.windowForComponent(rulesButton);
         if (event.getSource() == this.rulesButton)
         {
-            RulesWindow rulesWindow = new RulesWindow();
+            new RulesWindow();
         }
         else if (event.getSource() == this.startGameButton)
         {
-            GameWindow gameWindow = new GameWindow(this.rows,this.columns);
+            new GameWindow(this.rows,this.columns);
         }
     }
 
@@ -41,5 +41,3 @@ public class WindowChanger implements ActionListener {
         this.columns = columns;
     }
 }
-
-// je fais une clas spour le window changer et jinstantie une windowchanger
