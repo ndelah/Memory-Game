@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class GameWindow extends JFrame {
 
@@ -17,6 +18,11 @@ public class GameWindow extends JFrame {
     private int rows;
     private int columns;
     private int gridSize; // TODO: make
+
+    private ArrayList<Image> images;
+    private Image testImage;
+
+
 
     // Parameters
     //TODO: Create some sort of template so that I dont always have to repeat those parameters.
@@ -63,9 +69,11 @@ public class GameWindow extends JFrame {
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
+        // TODO: Change to the url for each theme
+        String path = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\colors\\blue.jpg";
 
         for (int i = 0; i < gridSize ; i++) {
-            centerPanel.add(new JButton("Button 1"));
+            centerPanel.add(new JLabel(new ImageIcon(path)));
         }
 
 
