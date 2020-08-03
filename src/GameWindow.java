@@ -15,6 +15,8 @@ public class GameWindow extends JFrame {
     private JLabel playerOne = new JLabel("Player 1");
     private JLabel playerTwo = new JLabel("Player 2");
 
+    private String player;
+
     private int rows;
     private int columns;
     private int gridSize; // TODO: make
@@ -33,9 +35,10 @@ public class GameWindow extends JFrame {
 
     private JLabel timeLeft = new JLabel("10;00");
 
-    public GameWindow(int rows, int columns){
+    public GameWindow(int rows, int columns, String player){
         this.rows = rows;
         this.columns = columns;
+        this.player = player;
         this.setGridSize();
 
 

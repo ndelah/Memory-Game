@@ -7,6 +7,7 @@ public class WindowChanger implements ActionListener {
     private JButton startGameButton;
     private int rows; //Todo; Ask lionel if it is correct to add the rows here. or if there is another way to keeep the rows in the start model
     private int columns;
+    private String player;
 
     public WindowChanger(JButton rulesButton,JButton startGameButton){
         this.rulesButton = rulesButton;
@@ -21,7 +22,7 @@ public class WindowChanger implements ActionListener {
         }
         else if (event.getSource() == this.startGameButton)
         {
-            new GameWindow(this.rows,this.columns);
+            new GameWindow(this.rows,this.columns,this.player);
         }
     }
 

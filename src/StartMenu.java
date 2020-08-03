@@ -58,10 +58,15 @@ public class StartMenu extends JFrame {
         extraSettingsPanel.getStartButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               int rows = (int) gridSizePanel.getRowsSpinner().getValue();;
-                int columns = (int) gridSizePanel.getColumnspinner().getValue();;
+                // Gets the players settings for the start of the game
+                int rows = (int) gridSizePanel.getRowsSpinner().getValue();; // rows of the game
+                int columns = (int) gridSizePanel.getColumnspinner().getValue();; // columns of the game
 
-                new GameWindow(rows,columns);
+                String player = opponentPanel.getOpponentGroup().getSelection().getActionCommand(); // String: player_2 or computer
+                System.out.println(player);
+
+               //TODO: Adapt the constructor to accomodate the new fields for the start of the game
+                new GameWindow(rows,columns,player);
             }
         });
 

@@ -31,3 +31,4 @@ public class ExtraSettings extends JPanel {
         return exitButton;
     }
 }
+

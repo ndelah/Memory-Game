@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 public class GameLauncher implements ActionListener {
     private int rows;
     private int columns;
+    private String player;
     private JButton startButton;
 
     public GameLauncher(JButton startButton, int rows, int columns){
@@ -18,7 +19,7 @@ public class GameLauncher implements ActionListener {
         JFrame welcomeFrame = (JFrame) SwingUtilities.windowForComponent(startButton);
         if (event.getSource() == this.startButton)
         {
-            new GameWindow(this.rows,this.columns);
+            new GameWindow(this.rows,this.columns, this.player);
         }
     }
 
