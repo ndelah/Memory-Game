@@ -10,14 +10,19 @@ public class Opponent extends JPanel {
 
 
     public Opponent(){
+        // Add Labels and Buttons
         this.add(opponentLabel);
         this.add(player2Button);
-        this.player2Button.setSelected(true);
         this.add(compouterButton);
+
+        // Add RadioButtons to their parent group
         this.getOpponentGroup().add(player2Button);
         this.getOpponentGroup().add(compouterButton);
 
+        // Set default player
+        this.player2Button.setSelected(true);
 
+        // Set action commands for radio buttons
         this.getPlayer2Button().setActionCommand("player_2");
         this.getCompouterButton().setActionCommand("computer");
     }

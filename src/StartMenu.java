@@ -70,10 +70,6 @@ public class StartMenu extends JFrame {
             }
         });
 
-        //TODO: wrong code to show to lionel
-        //GameLauncher launcher = new GameLauncher(extraSettingsPanel.getStartButton(),(int) gridSizePanel.getRowsSpinner().getValue(),(int) gridSizePanel.getRowsSpinner().getValue());
-        //extraSettingsPanel.getStartButton().addActionListener(launcher);
-
         this.pack();
         this.setVisible(true);
 

@@ -12,6 +12,7 @@ public class Difficulty extends JPanel{
     private ButtonGroup difficultyGroup = new ButtonGroup();
 
     public Difficulty(){
+        // Add Labels and Radio Buttons
         this.add(label_difficulty);
         this.add(touristButton);
         this.add(noviceButton);
@@ -19,6 +20,10 @@ public class Difficulty extends JPanel{
         this.add(veteranButton);
         this.add(seriousButton);
 
+        // set default level of difficulty
+        this.touristButton.setSelected(true);
+
+        // Add RadioButtons to their parent group
         difficultyGroup.add(touristButton);
         difficultyGroup.add(noviceButton);
         difficultyGroup.add(expertButton);
