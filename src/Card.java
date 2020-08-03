@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class Card extends JLabel{
+public class Card extends JLabel {
     private ImageIcon frontImage;
     private ImageIcon backgroundImage;
     private boolean isFlipped;
@@ -16,8 +18,48 @@ public class Card extends JLabel{
         this.isFound = false;
         this.clickable = true;
 
+        this.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (clickable){
+                    turnCard();
+                }
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
         //this.setIcon(this.backgroundImage);
         this.setIcon(this.frontImage);
+    }
+
+    public void turnCard(){
+        if (this.isFlipped){
+            this.setIcon(this.getBackgroundImage());
+            this.isFlipped = false;
+
+        } else {
+            this.setIcon(this.getFrontImage());
+            this.isFlipped = true;
+        }
     }
 
     public ImageIcon getFrontImage() {
