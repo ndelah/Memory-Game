@@ -13,25 +13,77 @@ public class Difficulty extends JPanel{
 
     public Difficulty(){
         // Add Labels and Radio Buttons
-        this.add(label_difficulty);
-        this.add(touristButton);
-        this.add(noviceButton);
-        this.add(expertButton);
-        this.add(veteranButton);
-        this.add(seriousButton);
+        this.add(this.getLabel_difficulty());
+        this.add(this.getTouristButton());
+        this.add(this.getNoviceButton());
+        this.add(this.getExpertButton());
+        this.add(this.getVeteranButton());
+        this.add(this.getSeriousButton());
 
         // set default level of difficulty
-        this.touristButton.setSelected(true);
+        this.getTouristButton().setSelected(true);
 
         // Add RadioButtons to their parent group
-        difficultyGroup.add(touristButton);
-        difficultyGroup.add(noviceButton);
-        difficultyGroup.add(expertButton);
-        difficultyGroup.add(veteranButton);
-        difficultyGroup.add(seriousButton);
+        difficultyGroup.add(this.getTouristButton());
+        difficultyGroup.add(this.getNoviceButton());
+        difficultyGroup.add(this.getExpertButton());
+        difficultyGroup.add(this.getVeteranButton());
+        difficultyGroup.add(this.getSeriousButton());
     }
 
+    public JLabel getLabel_difficulty() {
+        return label_difficulty;
+    }
 
+    public void setLabel_difficulty(JLabel label_difficulty) {
+        this.label_difficulty = label_difficulty;
+    }
 
+    public JRadioButton getTouristButton() {
+        return touristButton;
+    }
 
+    public void setTouristButton(JRadioButton touristButton) {
+        this.touristButton = touristButton;
+    }
+
+    public JRadioButton getNoviceButton() {
+        return noviceButton;
+    }
+
+    public void setNoviceButton(JRadioButton noviceButton) {
+        this.noviceButton = noviceButton;
+    }
+
+    public JRadioButton getExpertButton() {
+        return expertButton;
+    }
+
+    public void setExpertButton(JRadioButton expertButton) {
+        this.expertButton = expertButton;
+    }
+
+    public JRadioButton getVeteranButton() {
+        return veteranButton;
+    }
+
+    public void setVeteranButton(JRadioButton veteranButton) {
+        this.veteranButton = veteranButton;
+    }
+
+    public JRadioButton getSeriousButton() {
+        return seriousButton;
+    }
+
+    public void setSeriousButton(JRadioButton seriousButton) {
+        this.seriousButton = seriousButton;
+    }
+
+    public ButtonGroup getDifficultyGroup() {
+        return difficultyGroup;
+    }
+
+    public void setDifficultyGroup(ButtonGroup difficultyGroup) {
+        this.difficultyGroup = difficultyGroup;
+    }
 }

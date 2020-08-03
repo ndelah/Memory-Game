@@ -152,6 +152,7 @@
       <find>button</find>
       <find>SOUTH</find>
       <find>g</find>
+      <find>GameL</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
