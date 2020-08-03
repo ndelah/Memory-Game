@@ -36,10 +36,11 @@ public class GameWindow extends JFrame {
     private int panelWidth = 300;
     private int panelHeight = 200;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
+    private String theme;
 
     private JLabel timeLeft = new JLabel("10;00");
 
-    public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo){
+    public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo, String theme){
         this.rows = rows;
         this.columns = columns;
         this.player = player;
@@ -47,6 +48,7 @@ public class GameWindow extends JFrame {
         this.playerTwo = playerTwo;
         this.playerOneLabel.setText(playerOne.getName());
         this.playerTwoLabel.setText(playerTwo.getName());
+        this.theme = theme;
 
 
         this.setGridSize();
@@ -82,14 +84,13 @@ public class GameWindow extends JFrame {
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
-        // TODO: Change to the url for each theme
-        String path = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\colors\\";
+        String themesPath = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\";
 
         // Create a list of images
         images = new ArrayList<ImageIcon>();
         for (int j = 0; j < 2; j++) {
             for (int i = 0; i < gridSize / 2; i++) {
-                images.add(new ImageIcon(path + i + ".jpg"));
+                images.add(new ImageIcon(themesPath + theme + "\\" + i + ".jpg"));
             }
         }
         // Shuffle images
