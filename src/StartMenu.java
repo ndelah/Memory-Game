@@ -31,6 +31,14 @@ public class StartMenu extends JFrame {
         // Rules
         this.createPanel(rulesPanel, panelColor,panelDimension);
 
+        //TODO: Create a class that extends ActionListner. It takes as input the type of window to open.
+        rulesPanel.getRulesButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new RulesWindow();
+            }
+        });
+
         // Difficulty
         this.createPanel(difficultyPanel, panelColor,panelDimension);
 
@@ -46,12 +54,6 @@ public class StartMenu extends JFrame {
         // Settings on the last row: Theme high score, start and exit
         this.createPanel(extraSettingsPanel, panelColor,panelDimension);
 
-
-        //WindowChanger windowChanger = new WindowChanger(rulesPanel.getRulesButton(),extraSettingsPanel.getStartButton());
-        //windowChanger.setRows(this.rows);
-        //windowChanger.setColumns(this.rows);
-        //rulesPanel.getRulesButton().addActionListener(windowChanger);
-        //extraSettingsPanel.getStartButton().addActionListener(windowChanger);
 
         //TODO: Ask Lionel if it is possible to refactor this ActionListener in a separate class while still getting access to the rows and columns
         // The issue is that if the rows and columns are passed outside the action listener it wont get the value
