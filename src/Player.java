@@ -2,6 +2,9 @@ public class Player {
 
     private String name;
     private int score;
+    private int attempts;
+
+    //Todo: write code that reset  attempts to 0 when two
 
     public Player(String name, int score) {
         this.name = name;

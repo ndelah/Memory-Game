@@ -19,14 +19,18 @@ public class StartMenu extends JFrame {
     private GridSize gridSizePanel = new GridSize();
     private ExtraSettings extraSettingsPanel = new ExtraSettings();
 
-    private int rows;
-    private int columns;
-
     public StartMenu() {
         // Frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle(gameWindowTitle);
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
+
+        this.setMinimumSize(new Dimension(500,500));
+        this.setPreferredSize(new Dimension(500,500));
+        this.setMaximumSize(new Dimension(800,800)); //TODO setmaximumsize doesnt seem to have an efect
+        //this.setSize(new Dimension(500,500));
+
+
 
         // Rules
         this.createPanel(rulesPanel, panelColor,panelDimension);
@@ -68,7 +72,7 @@ public class StartMenu extends JFrame {
                 System.out.println(player);
 
                //TODO: Adapt the constructor to accomodate the new fields for the start of the game
-                new GameWindow(rows,columns,player);
+                new GameWindow(rows,columns,player, new Player("Nicolas",0), new Player("Jonathan",0));
             }
         });
 

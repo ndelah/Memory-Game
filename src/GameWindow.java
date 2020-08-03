@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameWindow extends JFrame {
 
+    // JButton Fields
     private JPanel gamePanel = new JPanel();
     private JPanel upperPanel = new JPanel();
     private JPanel leftPanel = new JPanel();
@@ -12,16 +14,18 @@ public class GameWindow extends JFrame {
     private JPanel lowerPanel = new JPanel();
     private JButton exitButton = new JButton();
 
-    private JLabel playerOne = new JLabel("Player 1");
-    private JLabel playerTwo = new JLabel("Player 2");
+    private JLabel playerOneLabel = new JLabel("Player 1");
+    private JLabel playerTwoLabel = new JLabel("Player 2");
 
-    private String player;
-
+    private String player; // Whether we play against AI or human
+    private Player playerOne;
+    private Player playerTwo;
     private int rows;
     private int columns;
     private int gridSize; // TODO: make
 
-    private ArrayList<Image> images;
+
+    private ArrayList<ImageIcon> images;
     private Image testImage;
 
 
@@ -35,10 +39,16 @@ public class GameWindow extends JFrame {
 
     private JLabel timeLeft = new JLabel("10;00");
 
-    public GameWindow(int rows, int columns, String player){
+    public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo){
         this.rows = rows;
         this.columns = columns;
         this.player = player;
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
+        this.playerOneLabel.setText(playerOne.getName());
+        this.playerTwoLabel.setText(playerTwo.getName());
+
+
         this.setGridSize();
 
 
@@ -64,35 +74,44 @@ public class GameWindow extends JFrame {
         // Left Panel
         gamePanel.add(leftPanel, BorderLayout.WEST);
         //leftPanel.setLayout();
-        leftPanel.add(playerOne);
+        leftPanel.add(playerOneLabel);
 
         // Right Panel
         gamePanel.add(rightPanel, BorderLayout.EAST);
-        rightPanel.add(playerTwo);
+        rightPanel.add(playerTwoLabel);
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
         // TODO: Change to the url for each theme
-        String path = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\colors\\blue.jpg";
+        String path = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\colors\\";
 
-        for (int i = 0; i < gridSize ; i++) {
-            centerPanel.add(new JLabel(new ImageIcon(path)));
+        // Create a list of images
+        images = new ArrayList<ImageIcon>();
+        for (int j = 0; j < 2; j++) {
+            for (int i = 0; i < gridSize / 2; i++) {
+                images.add(new ImageIcon(path + i + ".jpg"));
+            }
         }
+        // Shuffle images
+        Collections.shuffle(images);
 
-
+        // Add Cards to board
+        for (int i = 0; i < gridSize  ; i++) {
+            centerPanel.add(new Card(images.get(i)));
+        }
 
         gamePanel.add(centerPanel, BorderLayout.CENTER);
 
 
-        //gamePanel.add();
-
         // South Panel
-        //FlowLayout flowLayout = new FlowLayout();
-        //this.createPanel(exitPanel, panelColor, panelDimension, flowLayout);
-        //exitPanel.add(exitButton);
+            //FlowLayout flowLayout = new FlowLayout();
+            //this.createPanel(exitPanel, panelColor, panelDimension, flowLayout);
+            //exitPanel.add(exitButton);
         ExitHandler exithandler = new ExitHandler(exitButton);
         exitButton.addActionListener(exithandler);
-        gamePanel.add(exitButton, BorderLayout.SOUTH);
+        gamePanel.add(lowerPanel, BorderLayout.SOUTH);
+
+        lowerPanel.add(exitButton);
 
         this.pack();
         this.setVisible(true);
@@ -119,6 +138,12 @@ public class GameWindow extends JFrame {
 
     public int getColumns() {
         return columns;
+    }
+
+
+
+    public void setPlayerTwoLabel(JLabel playerTwoLabel) {
+        this.playerTwoLabel = playerTwoLabel;
     }
 
     public JPanel getGamePanel() {

@@ -19,7 +19,7 @@ public class GameLauncher implements ActionListener {
         JFrame welcomeFrame = (JFrame) SwingUtilities.windowForComponent(startButton);
         if (event.getSource() == this.startButton)
         {
-            new GameWindow(this.rows,this.columns, this.player);
+            new GameWindow(this.rows,this.columns, this.player,new Player("Nicolas",0),new Player("Jonathan",0));
         }
     }
 
