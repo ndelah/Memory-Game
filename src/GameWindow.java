@@ -55,8 +55,6 @@ public class GameWindow extends JFrame {
         this.playerOneLabel.setText(playerOne.getName());
         this.playerTwoLabel.setText(playerTwo.getName());
         this.theme = theme;
-
-
         this.setGridSize();
 
         // Create the Frame containing the Game
@@ -91,14 +89,8 @@ public class GameWindow extends JFrame {
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
-
         images = createImages();
-
-        // Add Cards to board
-        for (int i = 0; i < gridSize  ; i++) {
-            centerPanel.add(new Card(images.get(i)));
-        }
-
+        createBoard();
         gamePanel.add(centerPanel, BorderLayout.CENTER);
 
 
@@ -109,9 +101,9 @@ public class GameWindow extends JFrame {
         ExitHandler exithandler = new ExitHandler(exitButton);
         exitButton.addActionListener(exithandler);
         gamePanel.add(lowerPanel, BorderLayout.SOUTH);
-
         lowerPanel.add(exitButton);
 
+        // Frame Parameters
         this.pack();
         this.setVisible(true);
     }
@@ -130,6 +122,12 @@ public class GameWindow extends JFrame {
         // Shuffle images
         Collections.shuffle(images);
         return images;
+    }
+
+    public void createBoard(){
+        for (int i = 0; i < gridSize  ; i++) {
+            centerPanel.add(new Card(images.get(i)));
+        }
     }
 
 
