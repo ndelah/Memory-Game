@@ -5,6 +5,13 @@ import java.util.Collections;
 
 public class GameWindow extends JFrame {
 
+    // Frame Parameters
+    //TODO: Create some sort of template so that I dont always have to repeat those parameters.
+    private Color panelColor = Color.WHITE;
+    private int panelWidth = 300;
+    private int panelHeight = 200;
+    private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
+
     // Panels
     private JPanel gamePanel = new JPanel();
     private JPanel upperPanel = new JPanel();
@@ -39,13 +46,6 @@ public class GameWindow extends JFrame {
     // Lower Panel Fields
     private JButton exitButton = new JButton();
 
-    //  Frame Parameters
-    //TODO: Create some sort of template so that I dont always have to repeat those parameters.
-    private Color panelColor = Color.WHITE;
-    private int panelWidth = 300;
-    private int panelHeight = 200;
-    private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
-
     public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo, String theme){
         this.rows = rows;
         this.columns = columns;
@@ -59,7 +59,6 @@ public class GameWindow extends JFrame {
 
         this.setGridSize();
 
-
         // Create the Frame containing the Game
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Rules of the GameWindow");
@@ -68,8 +67,6 @@ public class GameWindow extends JFrame {
         // Game Panel
         BorderLayout borderLayout = new BorderLayout();
         this.createPanel(gamePanel, panelColor, panelDimension, borderLayout);
-
-
 
         //TODO: Opening the game should close the welcome menu
         //TODO: Readjust the format of the closing button
@@ -94,17 +91,8 @@ public class GameWindow extends JFrame {
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
-        String themesPath = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\";
 
-        // Create a list of images
-        images = new ArrayList<ImageIcon>();
-        for (int j = 0; j < 2; j++) {
-            for (int i = 0; i < gridSize / 2; i++) {
-                images.add(new ImageIcon(themesPath + theme + "\\" + i + ".jpg"));
-            }
-        }
-        // Shuffle images
-        Collections.shuffle(images);
+        images = createImages();
 
         // Add Cards to board
         for (int i = 0; i < gridSize  ; i++) {
@@ -127,6 +115,23 @@ public class GameWindow extends JFrame {
         this.pack();
         this.setVisible(true);
     }
+
+
+
+    public ArrayList<ImageIcon> createImages(){
+        // Create a list of images
+        String themesPath = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\";
+        ArrayList<ImageIcon> images = new ArrayList<ImageIcon>();
+        for (int j = 0; j < 2; j++) {
+            for (int i = 0; i < gridSize / 2; i++) {
+                images.add(new ImageIcon(themesPath + theme + "\\" + i + ".jpg"));
+            }
+        }
+        // Shuffle images
+        Collections.shuffle(images);
+        return images;
+    }
+
 
     public void playerTurn(){
         // Todo: click a card

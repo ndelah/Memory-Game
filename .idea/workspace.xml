@@ -38,8 +38,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="408">
+                  <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -377,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596474702868</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Group GameWindow Fields by their location">
+      <created>1596531274840</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1596531274840</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -462,7 +469,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added buttons from the home menu" />
     <MESSAGE value="Added the buttons of the theme,  highscore, start and quit buttons" />
     <MESSAGE value="Add eventhandler to close the JFrame when the exit button is clicked" />
     <MESSAGE value="Added a CreatePanel method to every panel of the welcome menu" />
@@ -487,7 +493,8 @@
     <MESSAGE value="Create cards that load images on the screen" />
     <MESSAGE value="Add the background images to the cards and remove the useless game launcher class" />
     <MESSAGE value="Make the cards turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make the cards turn" />
+    <MESSAGE value="Group GameWindow Fields by their location" />
+    <option name="LAST_COMMIT_MESSAGE" value="Group GameWindow Fields by their location" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ActionListener.java" />
@@ -608,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="408">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
         </state>
       </provider>
     </entry>
