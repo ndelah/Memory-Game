@@ -5,40 +5,46 @@ import java.util.Collections;
 
 public class GameWindow extends JFrame {
 
-    // JButton Fields
+    // Panels
     private JPanel gamePanel = new JPanel();
     private JPanel upperPanel = new JPanel();
     private JPanel leftPanel = new JPanel();
     private JPanel rightPanel = new JPanel();
     private JPanel centerPanel = new JPanel();
     private JPanel lowerPanel = new JPanel();
-    private JButton exitButton = new JButton();
 
+    // Upper Panel Fields
+    private JLabel timeLeft = new JLabel("10:00");
+    private JLabel playerTurn = new JLabel("Player 1 Turn");
+
+    // Left Panel Fields
     private JLabel playerOneLabel = new JLabel("Player 1");
-    private JLabel playerTwoLabel = new JLabel("Player 2");
-
-    private String player; // Whether we play against AI or human
     private Player playerOne;
+    private JLabel scorePlayerOne = new JLabel("100");
+
+    // Right Panel Fields
+    private String player; // Whether we play against AI or human
+    private JLabel playerTwoLabel = new JLabel("Player 2");
     private Player playerTwo;
-    private int rows;
-    private int columns;
-    private int gridSize; // TODO: make
+    private JLabel scorePlayerTwo = new JLabel("200");
 
-
+    // Center Panel Fields
     private ArrayList<ImageIcon> images;
     private Image testImage;
+    private int rows;
+    private int columns;
+    private int gridSize;
+    private String theme;
 
+    // Lower Panel Fields
+    private JButton exitButton = new JButton();
 
-
-    // Parameters
+    //  Frame Parameters
     //TODO: Create some sort of template so that I dont always have to repeat those parameters.
     private Color panelColor = Color.WHITE;
     private int panelWidth = 300;
     private int panelHeight = 200;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
-    private String theme;
-
-    private JLabel timeLeft = new JLabel("10;00");
 
     public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo, String theme){
         this.rows = rows;
@@ -76,11 +82,15 @@ public class GameWindow extends JFrame {
         // Left Panel
         gamePanel.add(leftPanel, BorderLayout.WEST);
         //leftPanel.setLayout();
+        leftPanel.setLayout(new BoxLayout(leftPanel,BoxLayout.PAGE_AXIS));
         leftPanel.add(playerOneLabel);
+        leftPanel.add(scorePlayerOne);
 
         // Right Panel
         gamePanel.add(rightPanel, BorderLayout.EAST);
+        rightPanel.setLayout(new BoxLayout(rightPanel,BoxLayout.PAGE_AXIS));
         rightPanel.add(playerTwoLabel);
+        rightPanel.add(scorePlayerTwo);
 
         // Center Panel
         centerPanel.setLayout(new GridLayout(this.getRows(),this.getColumns()));
@@ -116,6 +126,25 @@ public class GameWindow extends JFrame {
 
         this.pack();
         this.setVisible(true);
+    }
+
+    public void playerTurn(){
+        // Todo: click a card
+
+        //TODO: What Happens when no cards are turned
+            // check whose turn it is
+            // if player 1 or 2 let them play
+            // if computer, let computer make a move
+            //
+
+        //TODO: What happens when One card is turned
+
+        //TODO: What happens when two cards are turned
+            // if they are the same, keep them up and give the player points
+
+
+            // if they are not the same turn them around
+
     }
 
     public void createPanel(JPanel panel, Color panelColor, Dimension panelDimension, LayoutManager layout){
