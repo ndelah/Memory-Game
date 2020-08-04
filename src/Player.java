@@ -9,6 +9,7 @@ public class Player {
     public Player(String name, int score) {
         this.name = name;
         this.score = score;
+        this.attempts = 2;
     }
 
     public String getName() {

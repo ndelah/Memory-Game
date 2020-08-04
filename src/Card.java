@@ -3,6 +3,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class Card extends JLabel {
+
+    private GameWindow gameWindow;
     private ImageIcon frontImage;
     private ImageIcon backgroundImage;
     private boolean isFlipped;
@@ -10,19 +12,24 @@ public class Card extends JLabel {
     private boolean clickable;
     private String bgImagePath = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\special_cards\\bg.jpg"; //Todo: Adapt all paths to be relative
 
-    public Card(ImageIcon image) {
-
+    public Card(ImageIcon image, GameWindow gameWindow) {
+        this.gameWindow = gameWindow;
         this.frontImage = image;
         this.backgroundImage = new ImageIcon(bgImagePath);
         this.isFlipped = false;
         this.isFound = false;
         this.clickable = true;
 
+        this.setIcon(this.backgroundImage);
+
+
         this.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (clickable){
                     turnCard();
+                    gameWindow.playerTurn();
+
                 }
             }
 
@@ -47,8 +54,6 @@ public class Card extends JLabel {
             }
         });
 
-        //this.setIcon(this.backgroundImage);
-        this.setIcon(this.frontImage);
     }
 
     public void turnCard(){
@@ -59,6 +64,7 @@ public class Card extends JLabel {
         } else {
             this.setIcon(this.getFrontImage());
             this.isFlipped = true;
+            this.clickable = false;
         }
     }
 

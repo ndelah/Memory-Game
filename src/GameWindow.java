@@ -103,6 +103,9 @@ public class GameWindow extends JFrame {
         gamePanel.add(lowerPanel, BorderLayout.SOUTH);
         lowerPanel.add(exitButton);
 
+
+        ArrayList<Card> flippedTiles;
+
         // Frame Parameters
         this.pack();
         this.setVisible(true);
@@ -124,7 +127,7 @@ public class GameWindow extends JFrame {
         return images;
     }
 
-    public void createBoard(){
+    public void createBoard(ArrayList<ImageIcon> images){
         for (int i = 0; i < gridSize  ; i++) {
             centerPanel.add(new Card(images.get(i)));
         }
@@ -133,6 +136,7 @@ public class GameWindow extends JFrame {
 
     public void playerTurn(){
         // Todo: click a card
+
 
         //TODO: What Happens when no cards are turned
             // check whose turn it is
