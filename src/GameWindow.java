@@ -22,29 +22,35 @@ public class GameWindow extends JFrame {
 
     // Upper Panel Fields
     private JLabel timeLeft = new JLabel("10:00");
-    private JLabel playerTurn = new JLabel("Player 1 Turn");
+    private JLabel playerTurn = new JLabel("Player 1");
 
     // Left Panel Fields
     private JLabel playerOneLabel = new JLabel("Player 1");
     private Player playerOne;
-    private JLabel scorePlayerOne = new JLabel("100");
+    private JLabel scorePlayerOne = new JLabel("0");
 
     // Right Panel Fields
     private String player; // Whether we play against AI or human
     private JLabel playerTwoLabel = new JLabel("Player 2");
     private Player playerTwo;
-    private JLabel scorePlayerTwo = new JLabel("200");
+    private JLabel scorePlayerTwo = new JLabel("0");
 
     // Center Panel Fields
     private ArrayList<ImageIcon> images;
-    private Image testImage;
     private int rows;
     private int columns;
     private int gridSize;
     private String theme;
 
+    private int nbCardsFound = 0;
+
+
     // Lower Panel Fields
     private JButton exitButton = new JButton();
+
+    // Unsorted Fields
+    ArrayList<Card> flippedTiles = new ArrayList<Card>();
+    int pointsPerPair = 500;
 
     public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo, String theme){
         this.rows = rows;
@@ -73,6 +79,7 @@ public class GameWindow extends JFrame {
         gamePanel.add(upperPanel, BorderLayout.NORTH);
         //leftPanel.setLayout();
         upperPanel.add(timeLeft);
+        upperPanel.add(playerTurn);
 
         // Left Panel
         gamePanel.add(leftPanel, BorderLayout.WEST);
@@ -80,7 +87,7 @@ public class GameWindow extends JFrame {
         leftPanel.setLayout(new BoxLayout(leftPanel,BoxLayout.PAGE_AXIS));
         leftPanel.add(playerOneLabel);
         leftPanel.add(scorePlayerOne);
-
+        
         // Right Panel
         gamePanel.add(rightPanel, BorderLayout.EAST);
         rightPanel.setLayout(new BoxLayout(rightPanel,BoxLayout.PAGE_AXIS));
@@ -104,7 +111,6 @@ public class GameWindow extends JFrame {
         lowerPanel.add(exitButton);
 
 
-        ArrayList<Card> flippedTiles;
 
         // Frame Parameters
         this.pack();
@@ -127,15 +133,70 @@ public class GameWindow extends JFrame {
         return images;
     }
 
-    public void createBoard(ArrayList<ImageIcon> images){
+    public void createBoard(){
         for (int i = 0; i < gridSize  ; i++) {
-            centerPanel.add(new Card(images.get(i)));
+            centerPanel.add(new Card(this.getImages().get(i),this,i));
         }
     }
 
 
-    public void playerTurn(){
+    public void playerTurn(Card card){
         // Todo: click a card
+        getFlippedTiles().add(card);
+        card.turnCard();
+
+
+        //TODO: What happens when Two cards is turned
+        if (getFlippedTiles().size() > 1 ){
+          // Prevents comparing the new card with a card chosen by the previous player
+            Card card1 = getFlippedTiles().get(getFlippedTiles().size() - 2);
+            Card card2 = getFlippedTiles().get(getFlippedTiles().size() - 1);
+
+            if (getFlippedTiles().size() % 2 == 0) {
+                //If the two images are the same
+              if (card1.getName().equals(card2.getName())) {
+                  System.out.println("They are the same image");
+                  // TODO: Leave them locked
+
+
+                  // TODO: Give points to the right player
+                  if (this.getPlayerTurn().getText().equals("Player 1")) {
+                      playerOne.incrementScore(pointsPerPair);
+                      scorePlayerOne.setText((Integer.toString(playerOne.getScore())));
+                      this.getPlayerTurn().setText("Player 2");
+                  } else {
+                      playerTwo.incrementScore(pointsPerPair);
+                      scorePlayerTwo.setText((Integer.toString(playerTwo.getScore())));
+                      this.getPlayerTurn().setText("Player 1");
+                  }
+
+                  //TODO if they are different images
+              } else {
+                  System.out.println("they are different images");
+
+
+                  card1.turnCard();
+                  card2.turnCard();
+                  card2.turnCard();
+                  try {
+                      Thread.sleep(1000);                 //1000 milliseconds is one second.
+                  } catch(InterruptedException ex) {
+                      Thread.currentThread().interrupt();
+                  }
+                  card2.turnCard();
+                  // TODO: Turn them both again
+                  if (this.getPlayerTurn().getText().equals("Player 1")) {
+                      this.getPlayerTurn().setText("Player 2");
+
+                  } else {
+                      this.getPlayerTurn().setText("Player 1");
+                  }
+
+
+              }
+          }
+
+        }
 
 
         //TODO: What Happens when no cards are turned
@@ -144,7 +205,7 @@ public class GameWindow extends JFrame {
             // if computer, let computer make a move
             //
 
-        //TODO: What happens when One card is turned
+
 
         //TODO: What happens when two cards are turned
             // if they are the same, keep them up and give the player points
@@ -178,6 +239,21 @@ public class GameWindow extends JFrame {
     }
 
 
+    public JLabel getPlayerTurn() {
+        return playerTurn;
+    }
+
+    public void setPlayerTurn(JLabel playerTurn) {
+        this.playerTurn = playerTurn;
+    }
+
+    public ArrayList<ImageIcon> getImages() {
+        return images;
+    }
+
+    public void setImages(ArrayList<ImageIcon> images) {
+        this.images = images;
+    }
 
     public void setPlayerTwoLabel(JLabel playerTwoLabel) {
         this.playerTwoLabel = playerTwoLabel;
@@ -199,6 +275,14 @@ public class GameWindow extends JFrame {
         return panelColor;
     }
 
+    public int getNbCardsFound() {
+        return nbCardsFound;
+    }
+
+    public void setNbCardsFound(int nbCardsFound) {
+        this.nbCardsFound = nbCardsFound;
+    }
+
     public int getPanelWidth() {
         return panelWidth;
     }
@@ -209,5 +293,13 @@ public class GameWindow extends JFrame {
 
     public Dimension getPanelDimension() {
         return panelDimension;
+    }
+
+    public ArrayList<Card> getFlippedTiles() {
+        return flippedTiles;
+    }
+
+    public void setFlippedTiles(ArrayList<Card> flippedTiles) {
+        this.flippedTiles = flippedTiles;
     }
 }

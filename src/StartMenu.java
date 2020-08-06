@@ -69,10 +69,8 @@ public class StartMenu extends JFrame {
                 int columns = (int) gridSizePanel.getColumnspinner().getValue(); // columns of the game
 
                 String player = opponentPanel.getOpponentGroup().getSelection().getActionCommand(); // String: player_2 or computer
-                System.out.println(player);
 
                 String theme = extraSettingsPanel.getThemesCombobox().getSelectedItem().toString();
-                System.out.println(theme);
 
 
                //TODO: Adapt the constructor to accomodate the new fields for the start of the game
