@@ -37,5 +37,9 @@ public class ExtraSettings extends JPanel {
     public JButton getExitButton() {
         return exitButton;
     }
+
+    public JButton getHighscoreButton() {
+        return highscoreButton;
+    }
 }
 

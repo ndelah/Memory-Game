@@ -1,0 +1,5 @@
+Nicolas; 10000
+Jonathan; 2000
+Alexander; 1000
+Google; 200
+Albert Heighn; 100

@@ -78,6 +78,13 @@ public class StartMenu extends JFrame {
             }
         });
 
+        extraSettingsPanel.getHighscoreButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new HighScoreWindow();
+            }
+        });
+
         this.pack();
         this.setVisible(true);
 

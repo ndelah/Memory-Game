@@ -157,7 +157,8 @@ public class GameWindow extends JFrame {
               if (card1.getName().equals(card2.getName())) {
                   System.out.println("They are the same image");
                   // TODO: Leave them locked
-
+                    this.setNbCardsFound(this.getNbCardsFound() +2);
+                  System.out.println(nbCardsFound);
 
                   // TODO: Give points to the right player
                   if (this.getPlayerTurn().getText().equals("Player 1")) {
@@ -173,28 +174,34 @@ public class GameWindow extends JFrame {
                   //TODO if they are different images
               } else {
                   System.out.println("they are different images");
-
-
-                  card1.turnCard();
-                  card2.turnCard();
-                  card2.turnCard();
-                  try {
-                      Thread.sleep(1000);                 //1000 milliseconds is one second.
-                  } catch(InterruptedException ex) {
-                      Thread.currentThread().interrupt();
-                  }
-                  card2.turnCard();
-                  // TODO: Turn them both again
-                  if (this.getPlayerTurn().getText().equals("Player 1")) {
-                      this.getPlayerTurn().setText("Player 2");
+                    card1.setClickable(true);
+                    card2.setClickable(true);
+                    card1.turnCard();
+                    card2.turnCard();
+//                  try {
+//                      Thread.sleep(1000);                 //1000 milliseconds is one second.
+//                  } catch(InterruptedException ex) {
+//                      Thread.currentThread().interrupt();
+//                  }
+                  // TODO: Change the player turn
+                  if (this.getPlayerTurn().getText().equals("Player 1c")) {
+                      this.getPlayerTurn().setText("Player 2's turn");
 
                   } else {
-                      this.getPlayerTurn().setText("Player 1");
+                      this.getPlayerTurn().setText("Player 1's turn");
                   }
 
 
               }
           }
+            // TODO: CHeck if the game is done
+            if (nbCardsFound == gridSize){
+                System.out.println("the game is over");
+
+            } else {
+                System.out.println("The game is still running");
+            }
+
 
         }
 
@@ -212,6 +219,13 @@ public class GameWindow extends JFrame {
 
 
             // if they are not the same turn them around
+
+    }
+    public void gameOver(){
+        // Save scores to highscores
+
+        // close game window
+
 
     }
 
