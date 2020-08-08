@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Timer;
+import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class GameWindow extends JFrame {
 
@@ -21,8 +24,24 @@ public class GameWindow extends JFrame {
     private JPanel lowerPanel = new JPanel();
 
     // Upper Panel Fields
-    private JLabel timeLeft = new JLabel("10:00");
+    private JLabel timeLeft = new JLabel();
     private JLabel playerTurn = new JLabel("Player 1");
+
+    // Make a timer
+    // (reference) Why the current approach over Timer class: https://stackoverflow.com/questions/10820033/make-a-simple-timer-in-java/14323134
+//    long startTime = System.currentTimeMillis();
+//
+//    long elapsedTime = System.currentTimeMillis() - startTime;
+//    long elapsedSeconds = elapsedTime / 1000;
+//    long secondsDisplay = elapsedSeconds / 60;
+//    long elapsedMinutes = elapsedSeconds / 60;
+//    String timeString = Long.toString(elapsedSeconds);
+
+    static int interval;
+    static Timer timer;
+
+
+
 
     // Left Panel Fields
     private JLabel playerOneLabel = new JLabel("Player 1");
@@ -43,6 +62,9 @@ public class GameWindow extends JFrame {
     private String theme;
 
     private int nbCardsFound = 0;
+
+    private final ScheduledExecutorService scheduler =
+            Executors.newScheduledThreadPool(1);
 
 
     // Lower Panel Fields
@@ -78,6 +100,22 @@ public class GameWindow extends JFrame {
         // Upper Panel
         gamePanel.add(upperPanel, BorderLayout.NORTH);
         //leftPanel.setLayout();
+
+        System.out.print("Input seconds => : ");
+        int secs = 60;
+        int delay = 0;
+        int period = 1000;
+        timer = new Timer();
+        interval = secs;
+        System.out.println(secs);
+        timer.scheduleAtFixedRate(new TimerTask() {
+
+            public void run() {
+                System.out.println(setInterval());
+                timeLeft.setText(Integer.toString(setInterval()));
+            }
+        }, delay, period);
+
         upperPanel.add(timeLeft);
         upperPanel.add(playerTurn);
 
@@ -109,8 +147,6 @@ public class GameWindow extends JFrame {
         exitButton.addActionListener(exithandler);
         gamePanel.add(lowerPanel, BorderLayout.SOUTH);
         lowerPanel.add(exitButton);
-
-
 
         // Frame Parameters
         this.pack();
@@ -154,35 +190,40 @@ public class GameWindow extends JFrame {
 
             if (getFlippedTiles().size() % 2 == 0) {
                 //If the two images are the same
-              if (card1.getName().equals(card2.getName())) {
-                  System.out.println("They are the same image");
-                  // TODO: Leave them locked
+                if (card1.getName().equals(card2.getName())) {
+                    System.out.println("They are the same image");
+                    // TODO: Leave them locked
                     this.setNbCardsFound(this.getNbCardsFound() +2);
-                  System.out.println(nbCardsFound);
+                    System.out.println(nbCardsFound);
 
-                  // TODO: Give points to the right player
-                  if (this.getPlayerTurn().getText().equals("Player 1")) {
-                      playerOne.incrementScore(pointsPerPair);
-                      scorePlayerOne.setText((Integer.toString(playerOne.getScore())));
-                      this.getPlayerTurn().setText("Player 2");
+                    // TODO: Give points to the right player
+                    if (this.getPlayerTurn().getText().equals("Player 1")) {
+                        playerOne.incrementScore(pointsPerPair);
+                        scorePlayerOne.setText((Integer.toString(playerOne.getScore())));
+                        this.getPlayerTurn().setText("Player 2");
                   } else {
-                      playerTwo.incrementScore(pointsPerPair);
-                      scorePlayerTwo.setText((Integer.toString(playerTwo.getScore())));
-                      this.getPlayerTurn().setText("Player 1");
+                        playerTwo.incrementScore(pointsPerPair);
+                        scorePlayerTwo.setText((Integer.toString(playerTwo.getScore())));
+                        this.getPlayerTurn().setText("Player 1");
                   }
 
-                  //TODO if they are different images
+              //TODO if they are different images
+                    // TODO: Refactor the repetition in a different method
               } else {
-                  System.out.println("they are different images");
-                    card1.setClickable(true);
-                    card2.setClickable(true);
-                    card1.turnCard();
-                    card2.turnCard();
-//                  try {
-//                      Thread.sleep(1000);                 //1000 milliseconds is one second.
-//                  } catch(InterruptedException ex) {
-//                      Thread.currentThread().interrupt();
-//                  }
+                    System.out.println("they are different images");
+                    if (card.isFlipped()) {
+                        scheduler.schedule(new Runnable() {
+                                               @Override
+                                               public void run() {
+                                                   card1.turnCard();
+                                                   card2.turnCard();
+                                                   card1.setClickable(true);
+                                                   card2.setClickable(true);
+                                               }
+                                           }
+                                , 1, TimeUnit.SECONDS);
+                    }
+
                   // TODO: Change the player turn
                   if (this.getPlayerTurn().getText().equals("Player 1c")) {
                       this.getPlayerTurn().setText("Player 2's turn");
@@ -223,10 +264,22 @@ public class GameWindow extends JFrame {
     }
     public void gameOver(){
         // Save scores to highscores
+        // If you were playing against a computer
+//        if (){
+
+//        }
+        // If you were playing against the human
+
 
         // close game window
 
 
+    }
+
+    private static final int setInterval() {
+        if (interval == 1)
+            timer.cancel();
+        return --interval;
     }
 
     public void createPanel(JPanel panel, Color panelColor, Dimension panelDimension, LayoutManager layout){

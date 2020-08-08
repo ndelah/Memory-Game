@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="034b815b-6b41-4ac3-b4e3-4798df613930" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HighScoreWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/highscores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/ExtraSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/ExtraSettings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExtraSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExtraSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HighScoreWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HighScoreWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,19 +28,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="28" selection-start-line="28" selection-start-column="2" selection-end-line="32" selection-end-column="7" />
+              <folding>
+                <marker date="1596880017023" expanded="true" signature="199:686" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
+            <state relative-caret-position="1003">
               <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+              <folding>
+                <element signature="e#4067#4625#0" />
+                <element signature="e#4631#4791#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+            <state relative-caret-position="384">
+              <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -127,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/Rules.java" />
         <option value="$PROJECT_DIR$/src/ExitHandler.java" />
         <option value="$PROJECT_DIR$/src/GridChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Opponent.java" />
         <option value="$PROJECT_DIR$/src/Difficulty.java" />
         <option value="$PROJECT_DIR$/src/WindowChanger.java" />
@@ -135,15 +155,16 @@
         <option value="$PROJECT_DIR$/src/GameLauncher.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Card.java" />
-        <option value="$PROJECT_DIR$/src/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/ExtraSettings.java" />
         <option value="$PROJECT_DIR$/src/StartMenu.java" />
         <option value="$PROJECT_DIR$/src/HighScoreWindow.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/GameWindow.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1356" />
+    <option name="x" value="-12" />
     <option name="y" value="68" />
     <option name="width" value="1394" />
     <option name="height" value="1770" />
@@ -415,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596704882951</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Checkpoint asus pc">
+      <created>1596806017839</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1596806017839</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -431,7 +459,7 @@
     <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49961028" visible="true" weight="0.23658352" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49961028" visible="true" weight="0.18745276" />
       <window_info id="Structure" order="1" sideWeight="0.5003897" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,7 +468,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38807946" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3483444" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -500,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create a Time class outside the StartMenu" />
     <MESSAGE value="Create a Rules class outside the StartMenu" />
     <MESSAGE value="Create a Extra Settings class outside the StartMenu" />
     <MESSAGE value="Refactor the ExitHandler in the Extra Settings Class" />
@@ -525,20 +552,21 @@
     <MESSAGE value="create the createBoard method" />
     <MESSAGE value="Create the onemove method v1" />
     <MESSAGE value="Create point system and card discovery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create point system and card discovery" />
+    <MESSAGE value="Checkpoint asus pc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkpoint asus pc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HighScoreWindow.java</url>
-          <line>64</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HighScoreWindow.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -648,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExtraSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -669,28 +690,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="179" column="37" selection-start-line="179" selection-start-column="37" selection-end-line="179" selection-end-column="37" />
-          <folding>
-            <element signature="method#createImages#0;class#GameWindow#0" />
-            <element signature="method#createBoard#0;class#GameWindow#0" />
-          </folding>
+        <state relative-caret-position="384">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="255">
+          <caret line="28" selection-start-line="28" selection-start-column="2" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <marker date="1596880017023" expanded="true" signature="199:686" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        <state relative-caret-position="289">
+          <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+          <folding>
+            <element signature="e#4067#4625#0" />
+            <element signature="e#4631#4791#0" />
+          </folding>
         </state>
       </provider>
     </entry>

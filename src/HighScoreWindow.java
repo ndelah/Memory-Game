@@ -59,12 +59,11 @@ public class HighScoreWindow extends JFrame {
         try(Scanner scoreReader = new Scanner(new FileReader(scorePath))){
             while (scoreReader.hasNext()&& scoresLoaded <= 11){
                 try {
+                    // try to load a line
                     String line = scoreReader.nextLine();
                     System.out.println(line);
                     String line_part[] = line.split(";");
-                    if (scoresLoaded <= 11) {
-                        rowData[scoresLoaded] = line_part;
-                    }
+                    rowData[scoresLoaded] = line_part;
                     System.out.println(scoresLoaded);
                     scoresLoaded += 1;
                 } catch (InputMismatchException mismatch) {
