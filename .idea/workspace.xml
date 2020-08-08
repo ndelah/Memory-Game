@@ -4,13 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/src/GridSize.java" line="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="034b815b-6b41-4ac3-b4e3-4798df613930" name="Default Changelist" comment="">
+    <list default="true" id="034b815b-6b41-4ac3-b4e3-4798df613930" name="Default Changelist" comment="Add Timer functionality and Schedular for cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HighScoreWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HighScoreWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,20 +40,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+            <state relative-caret-position="442">
+              <caret line="83" column="136" selection-start-line="83" selection-start-column="136" selection-end-line="83" selection-end-column="136" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Time.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExtraSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
                 <element signature="e#4067#4625#0" />
                 <element signature="e#4631#4791#0" />
@@ -142,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/NewBoston.java" />
         <option value="$PROJECT_DIR$/src/HomePage.java" />
         <option value="$PROJECT_DIR$/src/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/Time.java" />
         <option value="$PROJECT_DIR$/src/RulesWindow.java" />
         <option value="$PROJECT_DIR$/src/RulesHandler.java" />
         <option value="$PROJECT_DIR$/src/Rules.java" />
@@ -156,10 +174,11 @@
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Card.java" />
         <option value="$PROJECT_DIR$/src/ExtraSettings.java" />
-        <option value="$PROJECT_DIR$/src/StartMenu.java" />
         <option value="$PROJECT_DIR$/src/HighScoreWindow.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GameWindow.java" />
+        <option value="$PROJECT_DIR$/src/Time.java" />
+        <option value="$PROJECT_DIR$/src/StartMenu.java" />
       </list>
     </option>
   </component>
@@ -443,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596806017839</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add Timer functionality and Schedular for cards">
+      <created>1596883663626</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1596883663626</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -459,7 +485,7 @@
     <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49961028" visible="true" weight="0.18745276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49961028" visible="true" weight="0.18745276" />
       <window_info id="Structure" order="1" sideWeight="0.5003897" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -467,15 +493,15 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3483444" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32847682" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2741722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969603" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969603" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969603" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32847682" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32847682" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -528,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create a Rules class outside the StartMenu" />
     <MESSAGE value="Create a Extra Settings class outside the StartMenu" />
     <MESSAGE value="Refactor the ExitHandler in the Extra Settings Class" />
     <MESSAGE value="Refactor the Create Panel Method" />
@@ -553,7 +578,8 @@
     <MESSAGE value="Create the onemove method v1" />
     <MESSAGE value="Create point system and card discovery" />
     <MESSAGE value="Checkpoint asus pc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checkpoint asus pc" />
+    <MESSAGE value="Add Timer functionality and Schedular for cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Timer functionality and Schedular for cards" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,13 +604,6 @@
     <entry file="file://$PROJECT_DIR$/src/Mouse.java" />
     <entry file="file://$PROJECT_DIR$/src/Button.java" />
     <entry file="file://$PROJECT_DIR$/src/MySimpleButtonListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/basic_programming_memory_game/ExitHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -676,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExtraSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RulesWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -697,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -714,14 +719,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExtraSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+        <state relative-caret-position="255">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
             <element signature="e#4067#4625#0" />
             <element signature="e#4631#4791#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="83" column="136" selection-start-line="83" selection-start-column="136" selection-end-line="83" selection-end-column="136" />
         </state>
       </provider>
     </entry>

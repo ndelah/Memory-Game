@@ -9,4 +9,21 @@ public class Time extends JPanel{
         this.add(timeLabel);
         this.add(timeSlider);
     }
+
+
+
+    public int getTime(){
+        int time;
+        time = this.getTimeSlider().getValue();
+        return time;
+
+    }
+
+    public JLabel getTimeLabel() {
+        return timeLabel;
+    }
+
+    public JSlider getTimeSlider() {
+        return timeSlider;
+    }
 }

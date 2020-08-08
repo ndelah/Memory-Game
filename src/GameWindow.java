@@ -27,21 +27,13 @@ public class GameWindow extends JFrame {
     private JLabel timeLeft = new JLabel();
     private JLabel playerTurn = new JLabel("Player 1");
 
-    // Make a timer
-    // (reference) Why the current approach over Timer class: https://stackoverflow.com/questions/10820033/make-a-simple-timer-in-java/14323134
-//    long startTime = System.currentTimeMillis();
-//
-//    long elapsedTime = System.currentTimeMillis() - startTime;
-//    long elapsedSeconds = elapsedTime / 1000;
-//    long secondsDisplay = elapsedSeconds / 60;
-//    long elapsedMinutes = elapsedSeconds / 60;
-//    String timeString = Long.toString(elapsedSeconds);
-
+    // TODO: Justify why static and make private
+    // TODO: getters and settsers
     static int interval;
     static Timer timer;
-
-
-
+    int gameTime;
+    int delay = 0;
+    int period = 1000;
 
     // Left Panel Fields
     private JLabel playerOneLabel = new JLabel("Player 1");
@@ -49,7 +41,7 @@ public class GameWindow extends JFrame {
     private JLabel scorePlayerOne = new JLabel("0");
 
     // Right Panel Fields
-    private String player; // Whether we play against AI or human
+    private Boolean playerIsMachine; // Whether we play against AI or human
     private JLabel playerTwoLabel = new JLabel("Player 2");
     private Player playerTwo;
     private JLabel scorePlayerTwo = new JLabel("0");
@@ -74,16 +66,17 @@ public class GameWindow extends JFrame {
     ArrayList<Card> flippedTiles = new ArrayList<Card>();
     int pointsPerPair = 500;
 
-    public GameWindow(int rows, int columns, String player, Player playerOne, Player playerTwo, String theme){
+    public GameWindow(int rows, int columns, Boolean playerIsMachine, Player playerOne, Player playerTwo, String theme, int gameTime){
         this.rows = rows;
         this.columns = columns;
-        this.player = player;
+        this.playerIsMachine = playerIsMachine;
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
         this.playerOneLabel.setText(playerOne.getName());
         this.playerTwoLabel.setText(playerTwo.getName());
         this.theme = theme;
         this.setGridSize();
+        this.gameTime = gameTime;
 
         // Create the Frame containing the Game
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,20 +92,15 @@ public class GameWindow extends JFrame {
 
         // Upper Panel
         gamePanel.add(upperPanel, BorderLayout.NORTH);
-        //leftPanel.setLayout();
 
-        System.out.print("Input seconds => : ");
-        int secs = 60;
-        int delay = 0;
-        int period = 1000;
         timer = new Timer();
-        interval = secs;
-        System.out.println(secs);
+        interval = gameTime;
         timer.scheduleAtFixedRate(new TimerTask() {
 
             public void run() {
                 System.out.println(setInterval());
                 timeLeft.setText(Integer.toString(setInterval()));
+                gameOver();
             }
         }, delay, period);
 
@@ -236,12 +224,8 @@ public class GameWindow extends JFrame {
               }
           }
             // TODO: CHeck if the game is done
-            if (nbCardsFound == gridSize){
-                System.out.println("the game is over");
+            gameOver();
 
-            } else {
-                System.out.println("The game is still running");
-            }
 
 
         }
@@ -263,17 +247,17 @@ public class GameWindow extends JFrame {
 
     }
     public void gameOver(){
-        // Save scores to highscores
-        // If you were playing against a computer
-//        if (){
-
-//        }
-        // If you were playing against the human
-
-
-        // close game window
-
-
+        // Check if game is over
+        if (timeLeft.getText().equals("0") | nbCardsFound == gridSize ){
+            System.out.println("no more time. game is over");
+            if (playerIsMachine == true){
+                // save the player 1 score to highscores
+            } else {
+                // save the highest score to the highscores.
+            }
+        } else {
+            System.out.println("The game is still running");
+        }
     }
 
     private static final int setInterval() {
