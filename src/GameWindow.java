@@ -25,7 +25,7 @@ public class GameWindow extends JFrame {
 
     // Upper Panel Fields
     private JLabel timeLeft = new JLabel();
-    private JLabel playerTurn = new JLabel("Player 1");
+    private JLabel playerTurn = new JLabel("Player 1's turn");
 
     // TODO: Justify why static and make private
     // TODO: getters and settsers
@@ -67,6 +67,7 @@ public class GameWindow extends JFrame {
     int pointsPerPair = 500;
 
     public GameWindow(int rows, int columns, Boolean playerIsMachine, Player playerOne, Player playerTwo, String theme, int gameTime){
+        // Setting constructor fields
         this.rows = rows;
         this.columns = columns;
         this.playerIsMachine = playerIsMachine;
@@ -92,7 +93,7 @@ public class GameWindow extends JFrame {
 
         // Upper Panel
         gamePanel.add(upperPanel, BorderLayout.NORTH);
-
+        // Game CountDown
         timer = new Timer();
         interval = gameTime;
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -103,7 +104,6 @@ public class GameWindow extends JFrame {
                 gameOver();
             }
         }, delay, period);
-
         upperPanel.add(timeLeft);
         upperPanel.add(playerTurn);
 
@@ -128,6 +128,7 @@ public class GameWindow extends JFrame {
 
 
         // South Panel
+        // TODO: Fix the exit button
             //FlowLayout flowLayout = new FlowLayout();
             //this.createPanel(exitPanel, panelColor, panelDimension, flowLayout);
             //exitPanel.add(exitButton);
@@ -145,6 +146,7 @@ public class GameWindow extends JFrame {
 
     public ArrayList<ImageIcon> createImages(){
         // Create a list of images
+        // TODO: Make sure this path also works on another computer
         String themesPath = "C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\themes\\";
         ArrayList<ImageIcon> images = new ArrayList<ImageIcon>();
         for (int j = 0; j < 2; j++) {
@@ -165,17 +167,16 @@ public class GameWindow extends JFrame {
 
 
     public void playerTurn(Card card){
-        // Todo: click a card
+        // Turn cards when clicked
         getFlippedTiles().add(card);
         card.turnCard();
 
-
-        //TODO: What happens when Two cards is turned
+        // What to do when two cards are turned
         if (getFlippedTiles().size() > 1 ){
-          // Prevents comparing the new card with a card chosen by the previous player
+
             Card card1 = getFlippedTiles().get(getFlippedTiles().size() - 2);
             Card card2 = getFlippedTiles().get(getFlippedTiles().size() - 1);
-
+            // Prevents comparing the new card with a card chosen by the previous player
             if (getFlippedTiles().size() % 2 == 0) {
                 //If the two images are the same
                 if (card1.getName().equals(card2.getName())) {
@@ -184,15 +185,15 @@ public class GameWindow extends JFrame {
                     this.setNbCardsFound(this.getNbCardsFound() +2);
                     System.out.println(nbCardsFound);
 
-                    // TODO: Give points to the right player
-                    if (this.getPlayerTurn().getText().equals("Player 1")) {
+                    // Give points to the right player
+                    if (this.getPlayerTurn().getText().equals("Player 1's turn")) {
                         playerOne.incrementScore(pointsPerPair);
                         scorePlayerOne.setText((Integer.toString(playerOne.getScore())));
-                        this.getPlayerTurn().setText("Player 2");
+                        this.getPlayerTurn().setText("Player 2's turn");
                   } else {
                         playerTwo.incrementScore(pointsPerPair);
                         scorePlayerTwo.setText((Integer.toString(playerTwo.getScore())));
-                        this.getPlayerTurn().setText("Player 1");
+                        this.getPlayerTurn().setText("Player 1's turn");
                   }
 
               //TODO if they are different images
@@ -213,7 +214,7 @@ public class GameWindow extends JFrame {
                     }
 
                   // TODO: Change the player turn
-                  if (this.getPlayerTurn().getText().equals("Player 1c")) {
+                  if (this.getPlayerTurn().getText().equals("Player 1's turn")) {
                       this.getPlayerTurn().setText("Player 2's turn");
 
                   } else {
@@ -250,6 +251,13 @@ public class GameWindow extends JFrame {
         // Check if game is over
         if (timeLeft.getText().equals("0") | nbCardsFound == gridSize ){
             System.out.println("no more time. game is over");
+            // Freeze all cards
+            for (Component component : centerPanel.getComponents()){
+                if (component instanceof Card){
+                    ((Card) component).setClickable(false);
+                }
+            }
+
             if (playerIsMachine == true){
                 // save the player 1 score to highscores
             } else {
