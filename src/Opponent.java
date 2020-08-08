@@ -4,27 +4,25 @@ public class Opponent extends JPanel {
     // Players
     private JLabel opponentLabel = new JLabel("Opponent");
     private JRadioButton player2Button = new JRadioButton("Human");
-    private JRadioButton compouterButton = new JRadioButton("Computer");
+    private JRadioButton computerButton = new JRadioButton("Computer");
     private ButtonGroup opponentGroup = new ButtonGroup();
-
-
 
     public Opponent(){
         // Add Labels and Buttons
         this.add(opponentLabel);
         this.add(player2Button);
-        this.add(compouterButton);
+        this.add(computerButton);
 
         // Add RadioButtons to their parent group
         this.getOpponentGroup().add(player2Button);
-        this.getOpponentGroup().add(compouterButton);
+        this.getOpponentGroup().add(computerButton);
 
         // Set default player
         this.player2Button.setSelected(true);
 
         // Set action commands for radio buttons
         this.getPlayer2Button().setActionCommand("player_2");
-        this.getCompouterButton().setActionCommand("computer");
+        this.getComputerButton().setActionCommand("computer");
     }
 
     public JLabel getOpponentLabel() {
@@ -43,12 +41,12 @@ public class Opponent extends JPanel {
         this.player2Button = player2Button;
     }
 
-    public JRadioButton getCompouterButton() {
-        return compouterButton;
+    public JRadioButton getComputerButton() {
+        return computerButton;
     }
 
-    public void setCompouterButton(JRadioButton compouterButton) {
-        this.compouterButton = compouterButton;
+    public void setComputerButton(JRadioButton computerButton) {
+        this.computerButton = computerButton;
     }
 
     public void setOpponentGroup(ButtonGroup opponentGroup) {

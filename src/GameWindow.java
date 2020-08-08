@@ -102,6 +102,7 @@ public class GameWindow extends JFrame {
                 System.out.println(setInterval());
                 timeLeft.setText(Integer.toString(setInterval()));
                 gameOver();
+
             }
         }, delay, period);
         upperPanel.add(timeLeft);
@@ -129,6 +130,7 @@ public class GameWindow extends JFrame {
 
         // South Panel
         // TODO: Fix the exit button
+
             //FlowLayout flowLayout = new FlowLayout();
             //this.createPanel(exitPanel, panelColor, panelDimension, flowLayout);
             //exitPanel.add(exitButton);
@@ -257,6 +259,9 @@ public class GameWindow extends JFrame {
                     ((Card) component).setClickable(false);
                 }
             }
+            // TODO: Stop timer once game is stopped.
+            timer.cancel();
+
 
             if (playerIsMachine == true){
                 // save the player 1 score to highscores
