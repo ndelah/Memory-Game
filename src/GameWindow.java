@@ -66,6 +66,9 @@ public class GameWindow extends JFrame {
     ArrayList<Card> flippedTiles = new ArrayList<Card>();
     int pointsPerPair = 500;
 
+    // New Highscore window writes the data to a file.
+    HighScoreWindow highScoreWindow = new HighScoreWindow();
+
     public GameWindow(int rows, int columns, Boolean playerIsMachine, Player playerOne, Player playerTwo, String theme, int gameTime){
         // Setting constructor fields
         this.rows = rows;
@@ -252,6 +255,9 @@ public class GameWindow extends JFrame {
                 if (playerOne.getScore() > playerTwo.getScore()){
                     System.out.println("Player 1 Wins!!");
                     playerTurn.setText("Player 1 Wins!!");
+                    highScoreWindow.writeHighscores();
+
+
 
                 }
                 // It's a draw

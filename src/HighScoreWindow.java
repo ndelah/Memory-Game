@@ -1,9 +1,10 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.IOException;
 
 public class HighScoreWindow extends JFrame {
     // Window Fields
@@ -11,9 +12,20 @@ public class HighScoreWindow extends JFrame {
     private JPanel exitPanel = new JPanel();
     private JButton exitButton = new JButton("Exit");
 
-    private String[] columnNames = {"Player","Highscore"};
-    private String[][] rowData;
-    private JTable highScores = new JTable(rowData,columnNames);
+//    private String[] columnNames = {"Player","Highscore"};
+//    private String[][] rowData;
+//    private DefaultTableModel model;
+//    private JTable highScores = new JTable(rowData,columnNames);
+    private Object[] columnNames1 = new Object[]{"Player","Score"};
+
+
+    private Object[][] data;
+
+    private JTable highscores = new JTable(new DefaultTableModel(data,columnNames1));
+    private DefaultTableModel model = (DefaultTableModel) highscores.getModel();
+
+    private JScrollPane scrollPane = new JScrollPane(highscores);
+
 
     private Color panelColor = Color.WHITE;
     private int panelWidth = 300;
@@ -25,16 +37,17 @@ public class HighScoreWindow extends JFrame {
 
 
 
+
     public HighScoreWindow(){
         // Create the Frame containing the highScores
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Memory Game Hall of Fame");
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
-
         this.createPanel(highScorePanel,panelColor,panelDimension);
-        this.add(highScores);
+        highscores.setFillsViewportHeight(true);
+        highScorePanel.add(scrollPane);
 
-        loadHighScores(scorePath);
+        loader(scorePath,model);
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
@@ -53,31 +66,26 @@ public class HighScoreWindow extends JFrame {
         this.getContentPane().add(panel);
     }
 
-    public void loadHighScores(String scorePath){
-        rowData = new String[10][2];
-        int scoresLoaded = 0;
-        try(Scanner scoreReader = new Scanner(new FileReader(scorePath))){
-            while (scoreReader.hasNext()&& scoresLoaded <= 11){
-                try {
-                    // try to load a line
-                    String line = scoreReader.nextLine();
-                    System.out.println(line);
-                    String line_part[] = line.split(";");
-                    rowData[scoresLoaded] = line_part;
-                    System.out.println(scoresLoaded);
-                    scoresLoaded += 1;
-                } catch (InputMismatchException mismatch) {
-                    System.out.println("Invalid entry in file, stop reading from file.");
-                    break;
-                }
-
+    public void loader(String scorePath, DefaultTableModel model) {
+        try {
+            File file = new File(scorePath);
+            FileReader fileReader = new FileReader(file);   //reads the file
+            BufferedReader bufferedReader = new BufferedReader(fileReader);  //creates a buffering character input stream
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String line_part[] = line.split(";");
+                Object[] data = {line_part[0],line_part[1]};
+                model.addRow(data);
             }
-        } catch (FileNotFoundException e){
-            System.out.println("Error: File " + e + " not found. Refer to the almighty Google");
-            System.exit(0); // successful exit
-
+            fileReader.close();    //closes the stream and release the resources
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
+    public void writeHighscores(){
+        //
+        System.out.println("writing scores to high score table");
 
     }
 }
