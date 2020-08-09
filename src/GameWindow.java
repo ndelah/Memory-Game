@@ -222,31 +222,13 @@ public class GameWindow extends JFrame {
                   } else {
                       this.getPlayerTurn().setText("Player 1's turn");
                   }
-
-
               }
           }
             // TODO: CHeck if the game is done
             gameOver();
 
-
-
         }
 
-
-        //TODO: What Happens when no cards are turned
-            // check whose turn it is
-            // if player 1 or 2 let them play
-            // if computer, let computer make a move
-            //
-
-
-
-        //TODO: What happens when two cards are turned
-            // if they are the same, keep them up and give the player points
-
-
-            // if they are not the same turn them around
 
     }
     public void gameOver(){
@@ -266,7 +248,23 @@ public class GameWindow extends JFrame {
             if (playerIsMachine == true){
                 // save the player 1 score to highscores
             } else {
-                // save the highest score to the highscores.
+                // Player One wins
+                if (playerOne.getScore() > playerTwo.getScore()){
+                    System.out.println("Player 1 Wins!!");
+                    playerTurn.setText("Player 1 Wins!!");
+
+                }
+                // It's a draw
+                else if (playerOne.getScore() == playerTwo.getScore()){
+                    System.out.println("Draw!");
+                    playerTurn.setText("Draw :(");
+                } else if (playerOne.getScore() < playerTwo.getScore()){
+                    System.out.println("Player 2 Wins!!");
+                    playerTurn.setText("Player 2 Wins!!");
+                } else if (playerOne.getScore() == 0 & playerTwo.getScore() == 0){
+                    playerTurn.setText("Is this game a joke to you?");
+                }
+
             }
         } else {
             System.out.println("The game is still running");
