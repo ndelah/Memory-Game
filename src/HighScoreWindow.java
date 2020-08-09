@@ -12,31 +12,19 @@ public class HighScoreWindow extends JFrame {
     private JPanel exitPanel = new JPanel();
     private JButton exitButton = new JButton("Exit");
 
-//    private String[] columnNames = {"Player","Highscore"};
-//    private String[][] rowData;
-//    private DefaultTableModel model;
-//    private JTable highScores = new JTable(rowData,columnNames);
-    private Object[] columnNames1 = new Object[]{"Player","Score"};
-
-
-    private Object[][] data;
-
-    private JTable highscores = new JTable(new DefaultTableModel(data,columnNames1));
+    // Table Fields
+    private Object[] columnNames = new Object[]{"Player","Score"};
+    private Object[][] rowData;
+    private JTable highscores = new JTable(new DefaultTableModel(rowData, columnNames));
     private DefaultTableModel model = (DefaultTableModel) highscores.getModel();
-
     private JScrollPane scrollPane = new JScrollPane(highscores);
+    private String scorePath = "\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\src\\highscores.txt";
 
-
+    // Panel Fields
     private Color panelColor = Color.WHITE;
     private int panelWidth = 300;
     private int panelHeight = 200;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
-
-    private int lengthHighScoreTable = 10;
-    private String scorePath = "\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\src\\highscores.txt";
-
-
-
 
     public HighScoreWindow(){
         // Create the Frame containing the highScores
@@ -44,10 +32,11 @@ public class HighScoreWindow extends JFrame {
         this.setTitle("Memory Game Hall of Fame");
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
         this.createPanel(highScorePanel,panelColor,panelDimension);
-        highscores.setFillsViewportHeight(true);
-        highScorePanel.add(scrollPane);
 
-        loader(scorePath,model);
+        // Table Containing scores
+        highscores.setFillsViewportHeight(true);
+        highScorePanel.add(scrollPane); // Table must be added to scrollpane to render correctly
+        loader(scorePath,model); // Loads the scores from the text file
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
