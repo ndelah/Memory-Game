@@ -37,6 +37,7 @@ public class HighScoreWindow extends JFrame {
         loader(scorePath,model); // Loads the scores from the text file
         highscores.setAutoCreateRowSorter(true);
         highscores.getRowSorter().toggleSortOrder(1);
+        highscores.getRowSorter().toggleSortOrder(1);
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
