@@ -1,9 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class RulesWindow extends JFrame {
     private JPanel rulesPanel = new JPanel();
-    private JLabel rules = new JLabel("Rules of the game");
+    private JTextArea rules = new JTextArea("Rules of the game\n lolilolz");
     private JButton exitButton = new JButton("Exit");
     private JPanel exitPanel = new JPanel();
 
@@ -29,6 +32,16 @@ public class RulesWindow extends JFrame {
         // Add the rules pane
         this.createPanel(rulesPanel,panelColor,panelDimension);
         rulesPanel.add(rules);
+        try {
+            Scanner scanner = new Scanner( new File("C:\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\src\\rules.txt") );
+            String text = scanner.useDelimiter("\\A").next();
+            rules.setText(text);
+            scanner.close();
+        } catch (IOException e){
+            System.out.println("kjk");
+        }
+
+
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
