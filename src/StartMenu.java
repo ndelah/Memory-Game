@@ -20,6 +20,10 @@ public class StartMenu extends JFrame {
     private GridSize gridSizePanel = new GridSize();
     private ExtraSettings extraSettingsPanel = new ExtraSettings();
 
+
+    private JTextField playerOneName = new JTextField("Player 1");
+    private JTextField playerTwoName = new JTextField("Player 2");
+
     public StartMenu() {
         // Frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,9 +33,6 @@ public class StartMenu extends JFrame {
         this.setMinimumSize(frameSettings.getMinimumSize());
         this.setPreferredSize(frameSettings.getPreferredSize());
         this.setMaximumSize(frameSettings.getMaximumSize());
-        //this.setSize(new Dimension(500,500));
-
-
 
         // Rules
         this.createPanel(rulesPanel, panelColor,panelDimension);
@@ -50,8 +51,11 @@ public class StartMenu extends JFrame {
         // Time
         this.createPanel(timePanel, panelColor,panelDimension);
 
+
         // Opponent
         this.createPanel(opponentPanel, panelColor,panelDimension);
+        opponentPanel.add(playerOneName);
+        opponentPanel.add(playerTwoName);
 
         // GridSize: Rows and columns of the game
         this.createPanel(gridSizePanel, panelColor,panelDimension);
@@ -80,9 +84,9 @@ public class StartMenu extends JFrame {
 
                 String theme = extraSettingsPanel.getThemesCombobox().getSelectedItem().toString();
 
-
+                System.out.println(playerOneName.getText());
                //TODO: Adapt the constructor to accomodate the new fields for the start of the game
-                new GameWindow(rows,columns,playerIsMachine, new Player("Nicolas",0), new Player("Jonathan",0),theme,timePanel.getTime());
+                new GameWindow(rows,columns,playerIsMachine, new Player(playerOneName.getText(),0), new Player(playerTwoName.getText(),0),theme,timePanel.getTime());
             }
         });
 

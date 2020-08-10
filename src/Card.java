@@ -20,6 +20,7 @@ public class Card extends JLabel implements MouseListener{
         this.isFound = false;
         this.clickable = true;
         this.name = this.getFrontImage().toString();
+        this.setHorizontalAlignment(JLabel.CENTER);
 
 
         this.setIcon(this.backgroundImage);

@@ -20,3 +20,366 @@ Nicolas;0
 Jonathan;0
 Nicolas;0
 Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;500
+Jonathan;500
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;500
+Jonathan;500
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Jonathan;1000
+Nicolas;500
+Jonathan;500
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;500
+Jonathan;500
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
+Cinelli;500
+Campagnola;500
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;500
+Player 2;500
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 2;500
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 1;0
+Player 2;0
+Player 2;1500

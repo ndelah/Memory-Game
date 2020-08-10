@@ -3,7 +3,7 @@ import javax.swing.*;
 public class ExtraSettings extends JPanel {
     //private JButton themeButton = new JButton("Theme");
 
-    private String[] themes = {"Colors","Confusing flags","California style flags","Isle of Man Flags"};
+    private String[] themes = {"Colors","Confusing flags","California style flags"};
     private JComboBox themesCombobox = new JComboBox(themes);
 
     private JButton highscoreButton = new JButton("Highscore");

@@ -37,9 +37,9 @@ public class GameWindow extends JFrame {
     int period = 1000;
 
     // Left Panel Fields
-    private JLabel playerOneLabel = new JLabel("Player 1");
+    private JLabel playerOneLabel = new JLabel("Player 1",SwingConstants.CENTER);
     private Player playerOne;
-    private JLabel scorePlayerOne = new JLabel("0");
+    private JLabel scorePlayerOne = new JLabel("0",0);
 
     // Right Panel Fields
     private Boolean playerIsMachine; // Whether we play against AI or human
@@ -120,8 +120,11 @@ public class GameWindow extends JFrame {
         gamePanel.add(leftPanel, BorderLayout.WEST);
         //leftPanel.setLayout();
         leftPanel.setLayout(new BoxLayout(leftPanel,BoxLayout.PAGE_AXIS));
+        playerOneLabel.setHorizontalAlignment(JLabel.CENTER);
+        scorePlayerOne.setHorizontalAlignment(JLabel.CENTER);
         leftPanel.add(playerOneLabel);
         leftPanel.add(scorePlayerOne);
+
         
         // Right Panel
         gamePanel.add(rightPanel, BorderLayout.EAST);
@@ -173,11 +176,13 @@ public class GameWindow extends JFrame {
     public void createBoard(){
         for (int i = 0; i < gridSize  ; i++) {
             centerPanel.add(new Card(this.getImages().get(i),this,i));
+
         }
     }
 
 
     public void playerTurn(Card card){
+        // TODO: Stop timer when game exits
         // Turn cards when clicked
         getFlippedTiles().add(card);
         card.turnCard();
@@ -242,8 +247,9 @@ public class GameWindow extends JFrame {
     }
     public void gameOver(){
         // Check if game is over
-        if (timeLeft.getText().equals("0") | nbCardsFound == gridSize ){
+        if (Integer.parseInt(timeLeft.getText()) <= 0 | nbCardsFound == gridSize ){
             System.out.println("no more time. game is over");
+            timer.cancel();
             // Freeze all cards
             for (Component component : centerPanel.getComponents()){
                 if (component instanceof Card){

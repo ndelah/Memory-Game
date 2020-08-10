@@ -1,9 +1,9 @@
 import java.awt.*;
 
 public class FrameSettings {
-    Dimension minimumSize = new Dimension(900,500);
-    Dimension preferredSize = new Dimension(900,500);;
-    Dimension maximumSize = new Dimension(900,500);;
+    Dimension minimumSize = new Dimension(1280,720);
+    Dimension preferredSize = new Dimension(1280,720);;
+    Dimension maximumSize = new Dimension(1280,720 );;
 
     public FrameSettings(){
 
