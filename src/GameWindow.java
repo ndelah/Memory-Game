@@ -11,8 +11,8 @@ public class GameWindow extends JFrame {
     // Frame Parameters
     //TODO: Create some sort of template so that I dont always have to repeat those parameters.
     private Color panelColor = Color.WHITE;
-    private int panelWidth = 300;
-    private int panelHeight = 200;
+    private int panelWidth = 500;
+    private int panelHeight = 500;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
     // Panels

@@ -12,14 +12,15 @@ public class HighScoreWindow extends JFrame {
     // Table Fields
     private Object[] columnNames = new Object[]{"Player","Score"};
     private Object[][] rowData;
-    private JTable highscores = new JTable(new DefaultTableModel(rowData, columnNames));
-    private DefaultTableModel model = (DefaultTableModel) highscores.getModel();
+    private ScoresTableModel model = new ScoresTableModel(rowData,columnNames);
+    private JTable highscores = new JTable(model);
+
     private JScrollPane scrollPane = new JScrollPane(highscores);
     private String scorePath = "\\Users\\delah\\Documents\\Programming\\workspace\\basic_programming_memory_game\\src\\highscores.txt";
 
     // Panel Fields
     private Color panelColor = Color.WHITE;
-    private int panelWidth = 300;
+    private int panelWidth = 600;
     private int panelHeight = 200;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
 
@@ -34,8 +35,8 @@ public class HighScoreWindow extends JFrame {
         highscores.setFillsViewportHeight(true);
         highScorePanel.add(scrollPane); // Table must be added to scrollpane to render correctly
         loader(scorePath,model); // Loads the scores from the text file
-        Player player = new Player("Playertest",300);
-        writeHighScores(player);
+        highscores.setAutoCreateRowSorter(true);
+        highscores.getRowSorter().toggleSortOrder(1);
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
@@ -62,7 +63,12 @@ public class HighScoreWindow extends JFrame {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String line_part[] = line.split(";");
-                Object[] data = {line_part[0],line_part[1]};
+                System.out.println(line_part[0]);
+                System.out.println(line_part[1]);
+                Object[] data = new Object[]{line_part[0],Integer.parseInt(line_part[1])};
+                System.out.println(line_part[1].getClass().getName());
+                System.out.println(data[1].getClass().getName());
+
                 model.addRow(data);
             }
             fileReader.close();    //closes the stream and release the resources
@@ -72,20 +78,14 @@ public class HighScoreWindow extends JFrame {
     }
 
     public void writeHighScores(Player player){
-        //
         System.out.println("writing scores to high score table");
-
         try (FileWriter fileWriter = new FileWriter(scorePath,true)){
-
             fileWriter.write(player.getName() + ";" + player.getScore());
             fileWriter.write(System.getProperty("line.separator"));
-
         }
-
         catch (IOException e){
             System.out.println("File not found");
         }
-
     }
 
     public String getScorePath() {
