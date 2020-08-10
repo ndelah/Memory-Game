@@ -1,10 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class HighScoreWindow extends JFrame {
     // Window Fields
@@ -37,6 +34,8 @@ public class HighScoreWindow extends JFrame {
         highscores.setFillsViewportHeight(true);
         highScorePanel.add(scrollPane); // Table must be added to scrollpane to render correctly
         loader(scorePath,model); // Loads the scores from the text file
+        Player player = new Player("Playertest",300);
+        writeHighScores(player);
 
         // Add the Exit Button
         this.createPanel(exitPanel,panelColor,panelDimension);
@@ -72,9 +71,24 @@ public class HighScoreWindow extends JFrame {
         }
     }
 
-    public void writeHighscores(){
+    public void writeHighScores(Player player){
         //
         System.out.println("writing scores to high score table");
 
+        try (FileWriter fileWriter = new FileWriter(scorePath,true)){
+
+            fileWriter.write(player.getName() + ";" + player.getScore());
+            fileWriter.write(System.getProperty("line.separator"));
+
+        }
+
+        catch (IOException e){
+            System.out.println("File not found");
+        }
+
+    }
+
+    public String getScorePath() {
+        return scorePath;
     }
 }

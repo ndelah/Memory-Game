@@ -255,18 +255,21 @@ public class GameWindow extends JFrame {
                 if (playerOne.getScore() > playerTwo.getScore()){
                     System.out.println("Player 1 Wins!!");
                     playerTurn.setText("Player 1 Wins!!");
-                    highScoreWindow.writeHighscores();
-
-
-
+                    highScoreWindow.writeHighScores(playerOne);
                 }
                 // It's a draw
                 else if (playerOne.getScore() == playerTwo.getScore()){
                     System.out.println("Draw!");
                     playerTurn.setText("Draw :(");
+                    highScoreWindow.writeHighScores(playerOne);
+                    highScoreWindow.writeHighScores(playerTwo);
+
+                    // Player 2 Wins
                 } else if (playerOne.getScore() < playerTwo.getScore()){
                     System.out.println("Player 2 Wins!!");
                     playerTurn.setText("Player 2 Wins!!");
+                    highScoreWindow.writeHighScores(playerTwo);
+                // Nobody plays
                 } else if (playerOne.getScore() == 0 & playerTwo.getScore() == 0){
                     playerTurn.setText("Is this game a joke to you?");
                 }

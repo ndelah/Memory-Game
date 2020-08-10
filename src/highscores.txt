@@ -2,4 +2,14 @@ Nicolas; 10000
 Jonathan; 2000
 Alexander; 1000
 Google; 200
-Albert Heighn; 100
+Albert Heighn; 100Test;100
+Test;100
+Test;100
+Test;100
+Playertest;300
+Playertest;300
+Jonathan;500
+Playertest;300
+Playertest;300
+Nicolas;1000
+Playertest;300
