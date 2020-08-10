@@ -7,6 +7,8 @@ public class RulesWindow extends JFrame {
     private JButton exitButton = new JButton("Exit");
     private JPanel exitPanel = new JPanel();
 
+    FrameSettings frameSettings = new FrameSettings();
+
     // Parameters
     private Color panelColor = Color.WHITE;
     private int panelWidth = 300;
@@ -20,6 +22,10 @@ public class RulesWindow extends JFrame {
         this.setTitle("Rules of the GameWindow");
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
 
+        this.setMinimumSize(frameSettings.getMinimumSize());
+        this.setPreferredSize(frameSettings.getPreferredSize());
+        this.setMaximumSize(frameSettings.getMaximumSize());
+
         // Add the rules pane
         this.createPanel(rulesPanel,panelColor,panelDimension);
         rulesPanel.add(rules);
@@ -31,6 +37,7 @@ public class RulesWindow extends JFrame {
         exitButton.addActionListener(exithandler);
 
         this.pack();
+        this.setLocationRelativeTo(null); // Centers the frame
         this.setVisible(true);
     }
 

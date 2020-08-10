@@ -14,6 +14,7 @@ public class GameWindow extends JFrame {
     private int panelWidth = 500;
     private int panelHeight = 500;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
+    FrameSettings frameSettings = new FrameSettings();
 
     // Panels
     private JPanel gamePanel = new JPanel();
@@ -82,6 +83,10 @@ public class GameWindow extends JFrame {
         this.setGridSize();
         this.gameTime = gameTime;
 
+        this.setMinimumSize(frameSettings.getMinimumSize());
+        this.setPreferredSize(frameSettings.getPreferredSize());
+        this.setMaximumSize(frameSettings.getMaximumSize());
+
         // Create the Frame containing the Game
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Rules of the GameWindow");
@@ -144,6 +149,7 @@ public class GameWindow extends JFrame {
 
         // Frame Parameters
         this.pack();
+        this.setLocationRelativeTo(null); // Centers the frame
         this.setVisible(true);
     }
 

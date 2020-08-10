@@ -9,6 +9,8 @@ public class HighScoreWindow extends JFrame {
     private JPanel exitPanel = new JPanel();
     private JButton exitButton = new JButton("Exit");
 
+    FrameSettings frameSettings = new FrameSettings();
+
     // Table Fields
     private Object[] columnNames = new Object[]{"Player","Score"};
     private Object[][] rowData;
@@ -31,6 +33,10 @@ public class HighScoreWindow extends JFrame {
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
         this.createPanel(highScorePanel,panelColor,panelDimension);
 
+        this.setMinimumSize(frameSettings.getMinimumSize());
+        this.setPreferredSize(frameSettings.getPreferredSize());
+        this.setMaximumSize(frameSettings.getMaximumSize());
+
         // Table Containing scores
         highscores.setFillsViewportHeight(true);
         highScorePanel.add(scrollPane); // Table must be added to scrollpane to render correctly
@@ -46,6 +52,7 @@ public class HighScoreWindow extends JFrame {
         exitButton.addActionListener(exithandler);
 
         this.pack();
+        this.setLocationRelativeTo(null); // Centers the frame
         this.setVisible(true);
     }
 

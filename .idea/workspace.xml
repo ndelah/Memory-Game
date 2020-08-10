@@ -4,13 +4,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/GridSize.java" line="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="034b815b-6b41-4ac3-b4e3-4798df613930" name="Default Changelist" comment="Override getglass from">
-      <change afterPath="$PROJECT_DIR$/src/ScoreComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScoresTableModel.java" afterDir="false" />
+    <list default="true" id="034b815b-6b41-4ac3-b4e3-4798df613930" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FrameSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/RulesWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/RulesWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/basic_programming_memory_game/StartMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HighScoreWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HighScoreWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RulesWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RulesWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/highscores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/highscores.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -40,38 +45,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="153">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RulesWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScoresTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.desktop/javax/swing/DefaultButtonModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="404" column="49" selection-start-line="404" selection-start-column="49" selection-end-line="404" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ScoreComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#289#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -79,8 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+            <state relative-caret-position="115">
+              <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FrameSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -161,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/NewBoston.java" />
         <option value="$PROJECT_DIR$/src/HomePage.java" />
         <option value="$PROJECT_DIR$/src/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/RulesWindow.java" />
         <option value="$PROJECT_DIR$/src/RulesHandler.java" />
         <option value="$PROJECT_DIR$/src/Rules.java" />
         <option value="$PROJECT_DIR$/src/GridChangeListener.java" />
@@ -173,15 +174,17 @@
         <option value="$PROJECT_DIR$/src/ExtraSettings.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Time.java" />
-        <option value="$PROJECT_DIR$/src/StartMenu.java" />
         <option value="$PROJECT_DIR$/src/ExitHandler.java" />
         <option value="$PROJECT_DIR$/src/Opponent.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Computer.java" />
         <option value="$PROJECT_DIR$/src/ScoreComparator.java" />
-        <option value="$PROJECT_DIR$/src/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/ScoresTableModel.java" />
+        <option value="$PROJECT_DIR$/src/RulesWindow.java" />
+        <option value="$PROJECT_DIR$/src/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/HighScoreWindow.java" />
+        <option value="$PROJECT_DIR$/src/StartMenu.java" />
+        <option value="$PROJECT_DIR$/src/FrameSettings.java" />
       </list>
     </option>
   </component>
@@ -521,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597050537860</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Override getColumnClass from DefaultTableModel to get int columns">
+      <created>1597057271545</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1597057271545</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Sort the scores from high to low">
+      <created>1597058110749</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1597058110749</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -634,8 +651,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Row and column spinners now determine the size of the game grid" />
-    <MESSAGE value="Add themes combobox" />
     <MESSAGE value="Added the player information to the start of the Game" />
     <MESSAGE value="Removed the GameLauncher Class" />
     <MESSAGE value="Adding comments to code" />
@@ -659,7 +674,9 @@
     <MESSAGE value="Create method that reads highscores from text file" />
     <MESSAGE value="Refactor gamewindow class" />
     <MESSAGE value="Create the highscore writer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create the highscore writer" />
+    <MESSAGE value="Override getColumnClass from DefaultTableModel to get int columns" />
+    <MESSAGE value="Sort the scores from high to low" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sort the scores from high to low" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ActionListener.java" />
@@ -719,13 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="4839" column="8" selection-start-line="4839" selection-start-column="8" selection-end-line="4839" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RulesWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -795,23 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScoreComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -826,20 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.desktop/javax/swing/DefaultButtonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="404" column="49" selection-start-line="404" selection-start-column="49" selection-end-line="404" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.desktop/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -847,17 +826,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.desktop/javax/swing/DefaultButtonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="344">
+          <caret line="404" column="49" selection-start-line="404" selection-start-column="49" selection-end-line="404" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScoreComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#289#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScoresTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RulesWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HighScoreWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrameSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>

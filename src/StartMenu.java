@@ -8,6 +8,7 @@ public class StartMenu extends JFrame {
     // Parameters
     private String gameWindowTitle = "Memory GameWindow";
     private Color panelColor = Color.WHITE;
+    FrameSettings frameSettings = new FrameSettings();
     private int panelWidth = 500;
     private int panelHeight = 50;
     private Dimension panelDimension = new Dimension(panelWidth,panelHeight);
@@ -25,9 +26,9 @@ public class StartMenu extends JFrame {
         this.setTitle(gameWindowTitle);
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(),BoxLayout.PAGE_AXIS));
 
-        this.setMinimumSize(new Dimension(500,500));
-        this.setPreferredSize(new Dimension(500,500));
-        this.setMaximumSize(new Dimension(800,800)); //TODO setmaximumsize doesnt seem to have an efect
+        this.setMinimumSize(frameSettings.getMinimumSize());
+        this.setPreferredSize(frameSettings.getPreferredSize());
+        this.setMaximumSize(frameSettings.getMaximumSize());
         //this.setSize(new Dimension(500,500));
 
 
@@ -93,6 +94,7 @@ public class StartMenu extends JFrame {
         });
 
         this.pack();
+        this.setLocationRelativeTo(null); // Centers the frame
         this.setVisible(true);
 
     }
@@ -101,5 +103,11 @@ public class StartMenu extends JFrame {
         panel.setPreferredSize(panelDimension);
         panel.setLayout(new FlowLayout());
         this.getContentPane().add(panel);
+    }
+
+    public void setFrameSize(){
+        this.setMinimumSize(frameSettings.getMinimumSize());
+        this.setPreferredSize(frameSettings.getPreferredSize());
+        this.setMaximumSize(frameSettings.getMaximumSize());
     }
 }

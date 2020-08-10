@@ -16,3 +16,7 @@ Playertest;300
 Playertest;300
 Nicolas;500
 Jonathan;500
+Nicolas;0
+Jonathan;0
+Nicolas;0
+Jonathan;0
