@@ -3,3 +3,4 @@ This repo contains the code and report written for the class of Java on Object O
 
 
 ![Board of the Memory Game](https://imgur.com/a/ggEhhWo)
+![Board of the Memory Game](https://github.com/ndelah/Memory-Game/blob/master/game_presentation.jpg?raw=true)
